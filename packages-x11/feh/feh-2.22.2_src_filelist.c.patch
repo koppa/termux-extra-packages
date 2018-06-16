@@ -1,0 +1,12 @@
+diff -uNr feh-2.22.2/src/filelist.c feh-2.22.2.mod/src/filelist.c
+--- feh-2.22.2/src/filelist.c	2017-11-07 18:40:24.000000000 +0200
++++ feh-2.22.2.mod/src/filelist.c	2017-11-27 14:38:46.771353983 +0200
+@@ -159,7 +159,7 @@
+ {
+ 	char buf[1024];
+ 	size_t readsize;
+-	char *sfn = estrjoin("_", "/tmp/feh_stdin", "XXXXXX", NULL);
++	char *sfn = estrjoin("_", "/data/data/com.termux/files/usr/tmp/feh_stdin", "XXXXXX", NULL);
+ 	int fd = mkstemp(sfn);
+ 	FILE *outfile;
+ 

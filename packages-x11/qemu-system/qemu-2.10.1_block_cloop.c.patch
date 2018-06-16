@@ -1,0 +1,12 @@
+diff -uNr qemu-2.10.1/block/cloop.c qemu-2.10.1.mod/block/cloop.c
+--- qemu-2.10.1/block/cloop.c	2017-10-03 00:23:41.000000000 +0300
++++ qemu-2.10.1.mod/block/cloop.c	2017-11-30 00:03:18.946992501 +0200
+@@ -46,7 +46,7 @@
+ 
+ static int cloop_probe(const uint8_t *buf, int buf_size, const char *filename)
+ {
+-    const char *magic_version_2_0 = "#!/bin/sh\n"
++    const char *magic_version_2_0 = "#!/data/data/com.termux/files/usr/bin/sh\n"
+         "#V2.0 Format\n"
+         "modprobe cloop file=$0 && mount -r -t iso9660 /dev/cloop $1\n";
+     int length = strlen(magic_version_2_0);

@@ -1,0 +1,12 @@
+diff -uNr qemu-2.10.1/roms/seabios/scripts/kconfig/lkc.h qemu-2.10.1.mod/roms/seabios/scripts/kconfig/lkc.h
+--- qemu-2.10.1/roms/seabios/scripts/kconfig/lkc.h	2017-10-03 00:29:31.000000000 +0300
++++ qemu-2.10.1.mod/roms/seabios/scripts/kconfig/lkc.h	2017-11-30 00:00:33.326992619 +0200
+@@ -31,7 +31,7 @@
+ #define PACKAGE "linux"
+ #endif
+ 
+-#define LOCALEDIR "/usr/share/locale"
++#define LOCALEDIR "/data/data/com.termux/files/usr/share/locale"
+ 
+ #define _(text) gettext(text)
+ #define N_(text) (text)

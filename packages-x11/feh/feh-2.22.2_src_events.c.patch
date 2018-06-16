@@ -1,0 +1,12 @@
+diff -uNr feh-2.22.2/src/events.c feh-2.22.2.mod/src/events.c
+--- feh-2.22.2/src/events.c	2017-11-07 18:40:24.000000000 +0200
++++ feh-2.22.2.mod/src/events.c	2017-11-27 14:39:25.171353955 +0200
+@@ -124,7 +124,7 @@
+ 
+ 	free(confpath);
+ 
+-	if (!conf && ((conf = fopen("/etc/feh/buttons", "r")) == NULL))
++	if (!conf && ((conf = fopen("/data/data/com.termux/files/usr/etc/feh/buttons", "r")) == NULL))
+ 		return;
+ 
+ 	while (fgets(line, sizeof(line), conf)) {
