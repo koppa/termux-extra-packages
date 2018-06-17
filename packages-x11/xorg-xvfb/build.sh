@@ -3,7 +3,7 @@ TERMUX_PKG_MAINTAINER="Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr"
 TERMUX_PKG_HOMEPAGE=http://xorg.freedesktop.org/
 TERMUX_PKG_DESCRIPTION="X virtual framebuffer"
 TERMUX_PKG_VERSION=1.19.6
-TERMUX_PKG_REVISION=3
+TERMUX_PKG_REVISION=4
 TERMUX_PKG_SRCURL=https://xorg.freedesktop.org/releases/individual/xserver/xorg-server-$TERMUX_PKG_VERSION.tar.bz2
 TERMUX_PKG_SHA256=a732502f1db000cf36a376cd0c010ffdbf32ecdd7f1fa08ba7f5bdf9601cc197
 
@@ -59,7 +59,7 @@ TERMUX_PKG_EXTRA_CONFIGURE_ARGS="
 --with-xkb-path=$TERMUX_PREFIX/share/X11/xkb
 LIBS=-landroid-shmem"
 
-TERMUX_PKG_DEPENDS="libandroid-shmem, libpixman, libx11, libxau, libxfont2, libxinerama, libxkbfile, libxshmfence, openssl, xkeyboard-config, xorg-xkbcomp"
+TERMUX_PKG_DEPENDS="libandroid-shmem, libpixman, libx11, libxau, libxfont2, libxinerama, libxkbfile, libxshmfence, openssl, xkeyboard-config, xorg-fonts-75dpi, xorg-xkbcomp"
 TERMUX_PKG_CONFLICTS="xorg-server"
 TERMUX_PKG_REPLACES="xorg-server"
 
