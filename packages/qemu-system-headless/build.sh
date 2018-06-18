@@ -6,12 +6,16 @@ TERMUX_PKG_VERSION=2.11.1
 TERMUX_PKG_REVISION=1
 TERMUX_PKG_SRCURL=https://download.qemu.org/qemu-${TERMUX_PKG_VERSION}.tar.xz
 TERMUX_PKG_SHA256=8a5145d1f8bd2eadc6776f3e13c68cd28d01349e30639bdbcb26ac588d668686
-TERMUX_PKG_DEPENDS="glib, libandroid-support, libbz2, libcurl, libgnutls, libjemalloc, libjpeg-turbo, liblzo, libnettle, libpixman, libpng, libsdl, libseccomp, libssh2, libutil, ncurses"
+TERMUX_PKG_DEPENDS="glib, libandroid-support, libbz2, libcurl, libgnutls, libjemalloc, libjpeg-turbo, liblzo, libnettle, libpixman, libpng, libseccomp, libssh2, libutil, ncurses"
 TERMUX_PKG_BUILD_IN_SRC=true
 TERMUX_PKG_RM_AFTER_INSTALL="
 bin/qemu-nbd
 share/man/man8
 "
+
+TERMUX_PKG_CONFLICTS="qemu-system"
+TERMUX_PKG_BREAKS="qemu-system"
+TERMUX_PKG_PROVIDES="qemu-system"
 
 termux_step_configure()
 {
@@ -27,6 +31,7 @@ termux_step_configure()
                 --smbd="${TERMUX_PREFIX}/bin/smbd" \
                 --disable-guest-agent \
                 --enable-pie \
+                --disable-sdl \
                 --disable-gtk \
                 --disable-vte \
                 --enable-curses \

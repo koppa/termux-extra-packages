@@ -1,0 +1,12 @@
+diff -uNr qemu-2.10.1/util/qemu-sockets.c qemu-2.10.1.mod/util/qemu-sockets.c
+--- qemu-2.10.1/util/qemu-sockets.c	2017-10-03 00:23:41.000000000 +0300
++++ qemu-2.10.1.mod/util/qemu-sockets.c	2017-11-29 23:55:37.996992830 +0200
+@@ -891,7 +891,7 @@
+         path = saddr->path;
+     } else {
+         const char *tmpdir = getenv("TMPDIR");
+-        tmpdir = tmpdir ? tmpdir : "/tmp";
++        tmpdir = tmpdir ? tmpdir : "/data/data/com.termux/files/usr/tmp";
+         path = pathbuf = g_strdup_printf("%s/qemu-socket-XXXXXX", tmpdir);
+     }
+ 
