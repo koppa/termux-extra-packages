@@ -11,6 +11,6 @@ TERMUX_PKG_DEPENDS="libx11, libsm"
 TERMUX_PKG_BUILD_DEPENDS="xorg-util-macros"
 
 termux_step_pre_configure () {
-	export CFLAGS_FOR_BUILD=" "
-	export LDFLAGS_FOR_BUILD=" "
+    export CFLAGS_FOR_BUILD=" "
+    export LDFLAGS_FOR_BUILD=" "
 }

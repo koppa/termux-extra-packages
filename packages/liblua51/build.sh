@@ -1,9 +1,9 @@
 TERMUX_PKG_MAINTAINER="Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr"
 
-TERMUX_PKG_HOMEPAGE=https://www.lua.org/
+TERMUX_PKG_HOMEPAGE=https://www.lua.org
 TERMUX_PKG_DESCRIPTION="Shared library for the Lua interpreter (v5.1.x)"
 TERMUX_PKG_VERSION=5.1.5
-TERMUX_PKG_REVISION=4
+TERMUX_PKG_REVISION=5
 TERMUX_PKG_SRCURL=http://www.lua.org/ftp/lua-${TERMUX_PKG_VERSION}.tar.gz
 TERMUX_PKG_SHA256=2640fc56a795f29d28ef15e13c34a47e223960b0240e8cb0a82d9b0738695333
 TERMUX_PKG_BUILD_DEPENDS="readline"
@@ -33,9 +33,12 @@ termux_step_make_install()
             INSTALL_MAN="${TERMUX_PREFIX}/share/man/man1" \
             install
 
-        ${STRIP} -s "${TERMUX_PREFIX}/bin/lua5.1"
-        ${STRIP} -s "${TERMUX_PREFIX}/bin/luac5.1"
-        ${STRIP} --strip-unneeded "${TERMUX_PREFIX}/lib/liblua5.1.so.${TERMUX_PKG_VERSION}"
+        if [ -z "${TERMUX_DEBUG}" ]
+            ${STRIP} -s "${TERMUX_PREFIX}/bin/lua5.1"
+            ${STRIP} -s "${TERMUX_PREFIX}/bin/luac5.1"
+            ${STRIP} --strip-unneeded "${TERMUX_PREFIX}/lib/liblua5.1.so.${TERMUX_PKG_VERSION}"
+        fi
+
         ${TERMUX_ELF_CLEANER} "${TERMUX_PREFIX}/bin/lua5.1"
         ${TERMUX_ELF_CLEANER} "${TERMUX_PREFIX}/bin/luac5.1"
         ${TERMUX_ELF_CLEANER} "${TERMUX_PREFIX}/lib/liblua5.1.so.${TERMUX_PKG_VERSION}"

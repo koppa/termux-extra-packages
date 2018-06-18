@@ -3,7 +3,7 @@ TERMUX_PKG_MAINTAINER="Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr"
 TERMUX_PKG_HOMEPAGE=https://xorg.freedesktop.org/
 TERMUX_PKG_DESCRIPTION="X.org 75dpi fonts"
 TERMUX_PKG_VERSION=1.0.3
-TERMUX_PKG_DEPENDS="fontconfig-utils, xorg-fonts-alias, xorg-fonts-encodings, xorg-font-util, xorg-mkfontscale, xorg-mkfontdir"
+TERMUX_PKG_DEPENDS="fontconfig-utils, xorg-font-util, xorg-fonts-alias, xorg-fonts-encodings, xorg-mkfontdir, xorg-mkfontscale"
 TERMUX_PKG_CONFLICTS="xorg-fonts-lite"
 TERMUX_PKG_PLATFORM_INDEPENDENT=true
 TERMUX_PKG_BUILD_IN_SRC=true
@@ -21,52 +21,52 @@ font_sources_sha256=("c6024a1e4a1e65f413f994dd08b734efd393ce0a502eb465deb77b9a36
                      "ba3f5e4610c07bd5859881660753ec6d75d179f26fc967aa776dbb3d5d5cf48e")
 
 termux_step_post_extract_package() {
-	local _base_url="https://xorg.freedesktop.org/releases/individual/font"
+    local _base_url="https://xorg.freedesktop.org/releases/individual/font"
 
-	for i in {0..4}; do
-		local url="${_base_url}/${font_sources[i]}"
-		local file="${TERMUX_PKG_CACHEDIR}/${font_sources[i]}"
-		local checksum="${font_sources_sha256[i]}"
+    for i in {0..4}; do
+        local url="${_base_url}/${font_sources[i]}"
+        local file="${TERMUX_PKG_CACHEDIR}/${font_sources[i]}"
+        local checksum="${font_sources_sha256[i]}"
 
-		termux_download "${url}" "${file}" "${checksum}"
-		tar xf "${file}" -C "${TERMUX_PKG_SRCDIR}"
-	done
+        termux_download "${url}" "${file}" "${checksum}"
+        tar xf "${file}" -C "${TERMUX_PKG_SRCDIR}"
+    done
 }
 
 termux_step_pre_configure() {
-	if [ -z "$(command -v mkfontdir)" ]; then
-		echo
-		echo "Command 'mkfontdir' is not found."
-		echo "Install it by running 'sudo apt install xfonts-utils'."
-		echo
-		exit 1
-	fi
+    if [ -z "$(command -v mkfontdir)" ]; then
+        echo
+        echo "Command 'mkfontdir' is not found."
+        echo "Install it by running 'sudo apt install xfonts-utils'."
+        echo
+        exit 1
+    fi
 }
 
 termux_step_make_install() {
-	for i in {0..4}; do
-		local dir="${TERMUX_PKG_SRCDIR}/${font_sources[i]//.tar.bz2}"
+    for i in {0..4}; do
+        local dir="${TERMUX_PKG_SRCDIR}/${font_sources[i]//.tar.bz2}"
 
-		pushd "${dir}"
-		./configure --prefix="${TERMUX_PREFIX}" \
-					--host="${TERMUX_HOST_PLATFORM}" \
-					--with-fontdir="${TERMUX_PREFIX}/share/fonts/75dpi"
-		make -j "${TERMUX_MAKE_PROCESSES}"
-		make install
-		popd
-	done
+        pushd "${dir}"
+        ./configure --prefix="${TERMUX_PREFIX}" \
+                    --host="${TERMUX_HOST_PLATFORM}" \
+                    --with-fontdir="${TERMUX_PREFIX}/share/fonts/75dpi"
+        make -j "${TERMUX_MAKE_PROCESSES}"
+        make install
+        popd
+    done
 }
 
 termux_step_post_make_install() {
-	rm -f "${TERMUX_PREFIX}"/share/fonts/75dpi/fonts.*
+    rm -f "${TERMUX_PREFIX}"/share/fonts/75dpi/fonts.*
 }
 
 termux_step_create_debscripts() {
-	## POST INSTALL:
-	(
-		echo "#!${TERMUX_PREFIX}/bin/sh"
-		echo "mkfontscale ${TERMUX_PREFIX}/share/fonts/75dpi"
-		echo "mkfontdir ${TERMUX_PREFIX}/share/fonts/75dpi"
-		echo "exit 0"
-	) > postinst
+    ## POST INSTALL:
+    {
+        echo "#!${TERMUX_PREFIX}/bin/sh"
+        echo "mkfontscale ${TERMUX_PREFIX}/share/fonts/75dpi"
+        echo "mkfontdir ${TERMUX_PREFIX}/share/fonts/75dpi"
+        echo "exit 0"
+    } > postinst
 }

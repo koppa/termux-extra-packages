@@ -1,6 +1,6 @@
 TERMUX_PKG_MAINTAINER="Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr"
 
-TERMUX_PKG_HOMEPAGE=https://www.libssh2.org/
+TERMUX_PKG_HOMEPAGE=https://www.libssh2.org
 TERMUX_PKG_DESCRIPTION="A library implementing the SSH2 protocol as defined by Internet Drafts"
 TERMUX_PKG_VERSION=1.8.0
 TERMUX_PKG_REVISION=2
