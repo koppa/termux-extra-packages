@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 
 if [ "$(id -u)" != "0" ]; then
@@ -9,7 +9,9 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 apt update
-apt upgrade
+apt upgrade -y
 
 ## needed for building 'xorg-fonts-75dpi', 'xorg-fonts-100dpi'
-apt install xfonts-utils
+PACKAGES+=" xfonts-utils"
+
+apt install -y ${PACKAGES}
