@@ -9,7 +9,7 @@ Here are located build scripts and patches for packages which haven't been added
 ## How to enable Extra Packages in Termux
 1. You need to add PGP key to the APT's keyring:
 ```
-pkg install dirmngr
+pkg install dirmngr gnupg-curl
 apt-key adv --keyserver keys.gnupg.net --recv 9D6D488416B493F0
 ```
 
