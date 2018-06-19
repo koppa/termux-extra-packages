@@ -33,7 +33,7 @@ termux_step_make_install()
             INSTALL_MAN="${TERMUX_PREFIX}/share/man/man1" \
             install
 
-        if [ -z "${TERMUX_DEBUG}" ]
+        if [ -z "${TERMUX_DEBUG}" ]; then
             ${STRIP} -s "${TERMUX_PREFIX}/bin/lua5.1"
             ${STRIP} -s "${TERMUX_PREFIX}/bin/luac5.1"
             ${STRIP} --strip-unneeded "${TERMUX_PREFIX}/lib/liblua5.1.so.${TERMUX_PKG_VERSION}"
