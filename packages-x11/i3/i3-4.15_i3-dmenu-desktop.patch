@@ -1,0 +1,12 @@
+diff -uNr i3-4.15/i3-dmenu-desktop i3-4.15.mod/i3-dmenu-desktop
+--- i3-4.15/i3-dmenu-desktop	2018-03-10 19:29:14.000000000 +0200
++++ i3-4.15.mod/i3-dmenu-desktop	2018-06-19 20:58:07.388409072 +0300
+@@ -454,7 +454,7 @@
+     my ($fh, $filename) = tempfile();
+     binmode($fh, ':utf8');
+     say $fh <<EOT;
+-#!/bin/sh
++#!@TERMUX_PREFIX@/bin/sh
+ rm $filename
+ exec $exec
+ EOT

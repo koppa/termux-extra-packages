@@ -1,6 +1,6 @@
 diff -uNr i3-4.15/src/main.c i3-4.15.mod/src/main.c
 --- i3-4.15/src/main.c	2018-03-10 19:29:14.000000000 +0200
-+++ i3-4.15.mod/src/main.c	2018-06-17 14:22:55.962013129 +0300
++++ i3-4.15.mod/src/main.c	2018-06-19 20:56:07.378402887 +0300
 @@ -21,6 +21,8 @@
  #include <libgen.h>
  #include "shmlog.h"
