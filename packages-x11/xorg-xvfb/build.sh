@@ -59,7 +59,7 @@ TERMUX_PKG_EXTRA_CONFIGURE_ARGS="
 --with-xkb-path=${TERMUX_PREFIX}/share/X11/xkb
 LIBS=-landroid-shmem"
 
-TERMUX_PKG_DEPENDS="libandroid-shmem, libpixman, libx11, libxau, libxfont2, libxinerama, libxkbfile, libxshmfence, openssl, xkeyboard-config, xorg-fonts-75dpi, xorg-xkbcomp"
+TERMUX_PKG_DEPENDS="libandroid-shmem, libpixman, libx11, libxau, libxfont2, libxinerama, libxkbfile, libxshmfence, openssl, xkeyboard-config, xorg-fonts-75dpi | xorg-fonts-100dpi, xorg-xkbcomp"
 TERMUX_PKG_CONFLICTS="xorg-server"
 TERMUX_PKG_REPLACES="xorg-server"
 
