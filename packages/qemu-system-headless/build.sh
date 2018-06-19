@@ -14,7 +14,7 @@ share/man/man8
 "
 
 TERMUX_PKG_CONFLICTS="qemu-system"
-TERMUX_PKG_BREAKS="qemu-system"
+TERMUX_PKG_REPLACES="qemu-system"
 TERMUX_PKG_PROVIDES="qemu-system"
 
 termux_step_configure()
