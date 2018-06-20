@@ -48,9 +48,10 @@ int shm_open(const char *name, int oflag, mode_t mode) {
 
 	namelen = strlen(name);
 	fname = (char *) alloca(sizeof(SHMDIR) - 1 + namelen + 1);
-	mempcpy(mempcpy(fname, SHMDIR, sizeof(SHMDIR) - 1), name, namelen + 1);
+	memcpy(fname, SHMDIR, sizeof(SHMDIR) - 1);
+	memcpy(fname + sizeof(SHMDIR) - 1, name, namelen + 1);
 
-	fd = open(name, oflag, mode);
+	fd = open(fname, oflag, mode);
 	if (fd != -1) {
 		/* We got a descriptor.  Now set the FD_CLOEXEC bit.  */
 		int flags = fcntl(fd, F_GETFD, 0);
@@ -84,7 +85,8 @@ int shm_unlink(const char *name) {
 
 	namelen = strlen(name);
 	fname = (char *) alloca(sizeof(SHMDIR) - 1 + namelen + 1);
-	mempcpy(mempcpy(fname, SHMDIR, sizeof(SHMDIR) - 1), name, namelen + 1);
+	memcpy(fname, SHMDIR, sizeof(SHMDIR) - 1);
+	memcpy(fname + sizeof(SHMDIR) - 1, name, namelen + 1);
 
-	return unlink(name);
+	return unlink(fname);
 }
