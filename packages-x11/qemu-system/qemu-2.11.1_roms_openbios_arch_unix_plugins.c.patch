@@ -1,0 +1,12 @@
+diff -uNr qemu-2.11.1/roms/openbios/arch/unix/plugins.c qemu-2.11.1.mod/roms/openbios/arch/unix/plugins.c
+--- qemu-2.11.1/roms/openbios/arch/unix/plugins.c	2018-02-14 23:54:42.000000000 +0200
++++ qemu-2.11.1.mod/roms/openbios/arch/unix/plugins.c	2018-06-20 13:16:17.150476542 +0300
+@@ -14,7 +14,7 @@
+ 
+ #include "unix/plugins.h"
+ 
+-unsigned char *plugindir = "/usr/share/OpenBIOS/plugins";
++unsigned char *plugindir = "/data/data/com.termux/files/usr/share/OpenBIOS/plugins";
+ #define PLUGINDIR  plugindir
+ #define PATHSIZE   256
+ 

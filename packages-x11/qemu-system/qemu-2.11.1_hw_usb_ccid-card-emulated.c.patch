@@ -1,0 +1,12 @@
+diff -uNr qemu-2.11.1/hw/usb/ccid-card-emulated.c qemu-2.11.1.mod/hw/usb/ccid-card-emulated.c
+--- qemu-2.11.1/hw/usb/ccid-card-emulated.c	2018-02-14 23:53:22.000000000 +0200
++++ qemu-2.11.1.mod/hw/usb/ccid-card-emulated.c	2018-06-20 13:16:17.127143208 +0300
+@@ -411,7 +411,7 @@
+     return 0;
+ }
+ 
+-#define CERTIFICATES_DEFAULT_DB "/etc/pki/nssdb"
++#define CERTIFICATES_DEFAULT_DB "/data/data/com.termux/files/usr/etc/pki/nssdb"
+ #define CERTIFICATES_ARGS_TEMPLATE\
+     "db=\"%s\" use_hw=no soft=(,Virtual Reader,CAC,,%s,%s,%s)"
+ 

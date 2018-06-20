@@ -1,0 +1,12 @@
+diff -uNr qemu-2.11.1/slirp/misc.c qemu-2.11.1.mod/slirp/misc.c
+--- qemu-2.11.1/slirp/misc.c	2018-02-14 23:53:23.000000000 +0200
++++ qemu-2.11.1.mod/slirp/misc.c	2018-06-20 13:16:17.160476543 +0300
+@@ -12,6 +12,8 @@
+ #include "qemu/error-report.h"
+ #include "qemu/main-loop.h"
+ 
++static inline int getdtablesize() { return 1024; }
++
+ #ifdef DEBUG
+ int slirp_debug = DBG_CALL|DBG_MISC|DBG_ERROR;
+ #endif
