@@ -10,16 +10,16 @@ TERMUX_PKG_BUILD_IN_SRC=yes
 TERMUX_PKG_PLATFORM_INDEPENDENT=yes
 
 termux_step_make () {
-	return
+    return
 }
 
 termux_step_make_install () {
-	export PYTHONPATH=$TERMUX_PREFIX/lib/python2.7/site-packages/
-	python2.7 setup.py install --prefix="${TERMUX_PREFIX}" --force
+    export PYTHONPATH=${TERMUX_PREFIX}/lib/python2.7/site-packages/
+    python2.7 setup.py install --prefix="${TERMUX_PREFIX}" --force
 }
 
 termux_step_post_massage () {
-	find . -path '*/__pycache__*' -delete
+    find . -path '*/__pycache__*' -delete
     find . -path \*.pyc -delete
     find . -path \*.pyo -delete
 }

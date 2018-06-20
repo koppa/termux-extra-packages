@@ -44,10 +44,12 @@ cp -a ./packages/* ./termux-packages/packages/
 cp -a ./packages-x11/* ./termux-packages/packages/
 ```
 
-4. Run docker image:
+4. Setup docker image:
 ```
+cp ./setup-build-environment.sh ./termux-packages/
 cd ./termux-packages
 ./scripts/run-docker.sh
+sudo bash setup-build-environment.sh
 ```
 
 5. Build your package. For example tigervnc:

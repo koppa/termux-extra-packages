@@ -82,7 +82,7 @@ $defaultXStartup
        "fi\n".
        "[ -r \$HOME/.Xresources ] && xrdb \$HOME/.Xresources\n".
        "xsetroot -solid grey\n".
-       "xterm -geometry 80x24+10+10 -ls &\n".
+       "aterm -geometry 80x24+10+10 -ls &\n".
        "twm &\n");
 
 $defaultConfig

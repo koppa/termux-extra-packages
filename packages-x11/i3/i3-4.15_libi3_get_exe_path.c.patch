@@ -1,0 +1,17 @@
+diff -uNr i3-4.15/libi3/get_exe_path.c i3-4.15.mod/libi3/get_exe_path.c
+--- i3-4.15/libi3/get_exe_path.c	2018-03-10 19:29:14.000000000 +0200
++++ i3-4.15.mod/libi3/get_exe_path.c	2018-06-19 20:56:07.371736220 +0300
+@@ -73,12 +73,7 @@
+     /* Fall back to searching $PATH (or _CS_PATH in absence of $PATH). */
+     char *path = getenv("PATH");
+     if (path == NULL) {
+-        /* _CS_PATH is typically something like "/bin:/usr/bin" */
+-        while (confstr(_CS_PATH, tmp, tmp_size) > tmp_size) {
+-            tmp_size = tmp_size * 2;
+-            tmp = srealloc(tmp, tmp_size);
+-        }
+-        sasprintf(&path, ":%s", tmp);
++		path = "/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/bin/applets";
+     } else {
+         path = sstrdup(path);
+     }
