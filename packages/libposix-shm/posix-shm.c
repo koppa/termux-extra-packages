@@ -1,103 +1,90 @@
 //
-// A shm_open(), shm_unlink() workaround for Android
+// An implementation of shm_open(), shm_unlink() from the GNU C Library
 //
+// Copyright (C) 2001,2002,2005 Free Software Foundation, Inc.
 // Copyright (C) 2018 Leonid Plyushch
 //
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
+// This library is free software; you can redistribute it and/or
+// modify it under the terms of the GNU Lesser General Public
+// License as published by the Free Software Foundation; either
+// version 2.1 of the License, or (at your option) any later version.
 //
-// This program is distributed in the hope that it will be useful,
+// This library is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+// Lesser General Public License for more details.
 //
-// You should have received a copy of the GNU General Public License
-// along with this program. If not, see <http://www.gnu.org/licenses/>.
+// You should have received a copy of the GNU Lesser General Public
+// License along with this library; if not, write to the Free Software
+// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
 //
 
-#ifdef __ANDROID__
-#include <android/log.h>
-#define LOG_E(...) __android_log_print(ANDROID_LOG_INFO, "shmem", __VA_ARGS__)
-#endif
-
+#define _GNU_SOURCE
 #include <errno.h>
 #include <fcntl.h>
-#include <linux/limits.h>
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-#ifdef __ANDROID__
-#include <sys/stat.h>
-#endif
-
-#include <sys/types.h>
 #include <unistd.h>
 
-#include "posix-shm.h"
+#ifdef __ANDROID__
+#define SHMDIR "/data/data/com.termux/files/usr/tmp/"
+#else
+#define SHMDIR "/dev/shm/"
+#endif
 
 int shm_open(const char *name, int oflag, mode_t mode) {
-	char shm_file_name[PATH_MAX] = {0};
-	char *shm_dir = NULL;
-	struct stat st;
+	size_t namelen;
+	char *fname;
+	int fd;
 
-	if ((shm_dir = getenv("TMPDIR")) == NULL) {
-#ifdef __ANDROID__
-		shm_dir = "/data/data/com.termux/files/usr/tmp";
-#else
-		shm_dir = "/tmp";
-#endif
+	/* Construct the filename.  */
+	while (name[0] == '/') ++name;
+
+	if (name[0] == '\0') {
+		/* The name "/" is not supported.  */
+		errno = EINVAL;
+		return -1;
 	}
 
-#ifdef __ANDROID__
-	if (stat(shm_dir, &st) != -1) {
-		if (!S_ISDIR(st.st_mode)) {
-			LOG_E("shm_open(): file '%s' is not a directory", shm_dir);
-			return -1;
+	namelen = strlen(name);
+	fname = (char *) alloca(sizeof(SHMDIR) - 1 + namelen + 1);
+	mempcpy(mempcpy(fname, SHMDIR, sizeof(SHMDIR) - 1), name, namelen + 1);
+
+	fd = open(name, oflag, mode);
+	if (fd != -1) {
+		/* We got a descriptor.  Now set the FD_CLOEXEC bit.  */
+		int flags = fcntl(fd, F_GETFD, 0);
+		flags |= FD_CLOEXEC;
+		flags = fcntl(fd, F_SETFD, flags);
+
+		if (flags == -1) {
+			/* Something went wrong.  We cannot return the descriptor.  */
+			int save_errno = errno;
+			close(fd);
+			fd = -1;
+			errno = save_errno;
 		}
-	} else {
-		LOG_E("shm_open(): cannot access SHM directory '%s': %s", shm_dir, strerror(errno));
-		return -1;
-	}
-#endif
-
-	if (snprintf(shm_file_name, PATH_MAX-1, "%s/%s.shm", shm_dir, name) < 0) {
-		return -1;
 	}
 
-	return open(shm_file_name, oflag, mode);
+	return fd;
 }
 
 int shm_unlink(const char *name) {
-	char shm_file_name[PATH_MAX] = {0};
-	char *shm_dir = NULL;
-	struct stat st;
+	size_t namelen;
+	char *fname;
 
-	if ((shm_dir = getenv("TMPDIR")) == NULL) {
-#ifdef __ANDROID__
-		shm_dir = "/data/data/com.termux/files/usr/tmp";
-#else
-		shm_dir = "/tmp";
-#endif
-	}
+	/* Construct the filename.  */
+	while (name[0] == '/') ++name;
 
-#ifdef __ANDROID__
-	if (stat(shm_dir, &st) != -1) {
-		if (!S_ISDIR(st.st_mode)) {
-			LOG_E("shm_open(): file '%s' is not a directory", shm_dir);
-			return -1;
-		}
-	} else {
-		LOG_E("shm_open(): cannot access SHM directory '%s': %s", shm_dir, strerror(errno));
-		return -1;
-	}
-#endif
-
-	if (snprintf(shm_file_name, PATH_MAX-1, "%s/%s.shm", shm_dir, name) < 0){
+	if (name[0] == '\0') {
+		/* The name "/" is not supported.  */
+		errno = EINVAL;
 		return -1;
 	}
 
-	return unlink(shm_file_name);
+	namelen = strlen(name);
+	fname = (char *) alloca(sizeof(SHMDIR) - 1 + namelen + 1);
+	mempcpy(mempcpy(fname, SHMDIR, sizeof(SHMDIR) - 1), name, namelen + 1);
+
+	return unlink(name);
 }
