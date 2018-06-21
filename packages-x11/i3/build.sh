@@ -9,5 +9,5 @@ TERMUX_PKG_SHA256=217d524d1fbc85ae346b25f6848d1b7bcd2c23184ec88d29114bf5a6213853
 TERMUX_PKG_DEPENDS="libandroid-glob, libcairo-x, libev, libposix-shm, libxkbcommon, pango, pcre, perl, startup-notification, xcb-util-cursor, xcb-util-keysyms, xcb-util-wm, xcb-util-xrm, yajl"
 
 termux_step_pre_configure() {
-    export LIBS="-landroid-glob -lposix-shm -llog"
+    export LIBS="-lposix-shm -landroid-glob -landroid-shmem"
 }
