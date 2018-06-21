@@ -5,10 +5,7 @@
 #
 
 # set background image
-feh --bg-fill "${PREFIX}/etc/xdg/openbox/wallpaper.jpg" &
+#feh --bg-fill "${HOME}/wallpaper.jpg" &
 
 # start X composite effects manager
-xcompmgr -c -t-5 -l-5 -r4.5 -o.75 -d "${DISPLAY}" &
-
-# show panel
-pypanel &
+#xcompmgr -c -t-5 -l-5 -r4.5 -o.75 -d "${DISPLAY}" &

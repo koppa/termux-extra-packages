@@ -10,7 +10,7 @@
         </startupnotify>
       </action>
     </item>
-    <item label="Editor">
+    <item label="FLTK Text Editor">
       <action name="Execute">
         <command>fltk-editor</command>
         <startupnotify>
@@ -50,7 +50,7 @@
     <separator />
     <item label="Terminal">
       <action name="Execute">
-        <command>xterm -en en_US.UTF-8 -fg white -bg black -u8 -fn 7x13 -fa "DejaVu Sans Mono:size=10:antialias=true"</command>
+        <command>aterm</command>
         <startupnotify>
           <enabled>yes</enabled>
         </startupnotify>
