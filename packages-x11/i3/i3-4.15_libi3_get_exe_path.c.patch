@@ -1,6 +1,6 @@
 diff -uNr i3-4.15/libi3/get_exe_path.c i3-4.15.mod/libi3/get_exe_path.c
 --- i3-4.15/libi3/get_exe_path.c	2018-03-10 19:29:14.000000000 +0200
-+++ i3-4.15.mod/libi3/get_exe_path.c	2018-06-21 15:33:07.176807106 +0300
++++ i3-4.15.mod/libi3/get_exe_path.c	2018-06-21 19:49:28.270254396 +0300
 @@ -73,12 +73,7 @@
      /* Fall back to searching $PATH (or _CS_PATH in absence of $PATH). */
      char *path = getenv("PATH");
@@ -11,7 +11,14 @@ diff -uNr i3-4.15/libi3/get_exe_path.c i3-4.15.mod/libi3/get_exe_path.c
 -            tmp = srealloc(tmp, tmp_size);
 -        }
 -        sasprintf(&path, ":%s", tmp);
-+		path = "/data/data/com.termux/files/usr/bin:/data/data/com.termux/files/usr/bin/applets";
++		path = "@TERMUX_PREFIX@/bin:@TERMUX_PREFIX@/bin/applets";
      } else {
          path = sstrdup(path);
      }
+@@ -103,5 +98,5 @@
+     free(tmp);
+ 
+     /* Last resort: maybe it’s in /usr/bin? */
+-    return sstrdup("/usr/bin/i3-nagbar");
++    return sstrdup("@TERMUX_PREFIX@/bin/i3-nagbar");
+ }

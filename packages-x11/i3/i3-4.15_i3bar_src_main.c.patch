@@ -1,6 +1,6 @@
 diff -uNr i3-4.15/i3bar/src/main.c i3-4.15.mod/i3bar/src/main.c
 --- i3-4.15/i3bar/src/main.c	2018-03-10 19:29:14.000000000 +0200
-+++ i3-4.15.mod/i3bar/src/main.c	2018-06-21 15:34:58.140141265 +0300
++++ i3-4.15.mod/i3bar/src/main.c	2018-06-21 19:48:29.546920631 +0300
 @@ -96,7 +96,7 @@
      if (socket_path != NULL) {
          socket_path = sstrdup(socket_path);

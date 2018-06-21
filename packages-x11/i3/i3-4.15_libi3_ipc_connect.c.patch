@@ -1,6 +1,6 @@
 diff -uNr i3-4.15/libi3/ipc_connect.c i3-4.15.mod/libi3/ipc_connect.c
 --- i3-4.15/libi3/ipc_connect.c	2018-03-10 19:29:14.000000000 +0200
-+++ i3-4.15.mod/libi3/ipc_connect.c	2018-06-21 15:34:41.770141142 +0300
++++ i3-4.15.mod/libi3/ipc_connect.c	2018-06-21 19:48:29.570253964 +0300
 @@ -38,7 +38,7 @@
      }
  
