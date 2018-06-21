@@ -10,7 +10,7 @@ Here are located build scripts and patches for packages which haven't been added
 1. You need to add PGP key to the APT's keyring:
 ```
 pkg install dirmngr gnupg-curl
-apt-key adv --keyserver keys.gnupg.net --recv 9D6D488416B493F0
+apt-key adv --keyserver pool.sks-keyservers.net --recv 9D6D488416B493F0
 ```
 
 2. Add these lines to your sources.list file:
