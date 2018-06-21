@@ -1,6 +1,6 @@
 diff -uNr i3-4.15/i3-nagbar/main.c i3-4.15.mod/i3-nagbar/main.c
 --- i3-4.15/i3-nagbar/main.c	2018-03-10 19:29:14.000000000 +0200
-+++ i3-4.15.mod/i3-nagbar/main.c	2018-06-19 20:57:34.821740723 +0300
++++ i3-4.15.mod/i3-nagbar/main.c	2018-06-21 15:33:07.173473772 +0300
 @@ -172,7 +172,7 @@
          warn("Could not fdopen() temporary script to store the nagbar command");
          return;
