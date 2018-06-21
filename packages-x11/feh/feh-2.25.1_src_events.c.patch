@@ -1,6 +1,6 @@
-diff -uNr feh-2.22.2/src/events.c feh-2.22.2.mod/src/events.c
---- feh-2.22.2/src/events.c	2017-11-07 18:40:24.000000000 +0200
-+++ feh-2.22.2.mod/src/events.c	2017-11-27 14:39:25.171353955 +0200
+diff -uNr feh-2.25.1/src/events.c feh-2.25.1.mod/src/events.c
+--- feh-2.25.1/src/events.c	2018-03-07 18:53:33.000000000 +0200
++++ feh-2.25.1.mod/src/events.c	2018-06-21 17:31:53.783526575 +0300
 @@ -124,7 +124,7 @@
  
  	free(confpath);
