@@ -11,7 +11,13 @@ fi
 apt update
 apt upgrade -y
 
-## needed for building 'xorg-fonts-75dpi', 'xorg-fonts-100dpi'
+## for adwaita-icon-theme
+PACKAGES+=" gnome-common gtk-3-examples libgtk-3-bin"
+
+## for libgtk3
+PACKAGES+=" libgdk-pixbuf2.0-dev"
+
+## for building 'xorg-fonts-75dpi', 'xorg-fonts-100dpi'
 PACKAGES+=" xfonts-utils"
 
 apt install -y ${PACKAGES}
