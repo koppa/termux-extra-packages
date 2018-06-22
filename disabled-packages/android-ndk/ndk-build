@@ -1,7 +1,0 @@
-#!/data/data/com.termux/files/usr/bin/sh
-##
-##  Wrapper for ndk-build
-##
-
-export NDK_ROOT="${PREFIX}/opt/android-ndk-aide"
-exec "${NDK_ROOT}/ndk-build" "${@}"
