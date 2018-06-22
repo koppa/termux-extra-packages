@@ -17,7 +17,10 @@ PACKAGES+=" gnome-common gtk-3-examples libgtk-3-bin"
 ## for libgtk3
 PACKAGES+=" libgdk-pixbuf2.0-dev"
 
-## for building 'xorg-fonts-75dpi', 'xorg-fonts-100dpi'
+## for python-based packages (e.g. python2-xlib)
+PACKAGES+=" python-pip python3-pip"
+
+## for 'xorg-fonts-75dpi', 'xorg-fonts-100dpi'
 PACKAGES+=" xfonts-utils"
 
 apt install -y ${PACKAGES}

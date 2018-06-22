@@ -3,18 +3,14 @@ TERMUX_PKG_MAINTAINER="Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr"
 TERMUX_PKG_HOMEPAGE=http://pypanel.sourceforge.net/
 TERMUX_PKG_DESCRIPTION="A lightweight panel/taskbar for X11 window managers written in python."
 TERMUX_PKG_VERSION=2.4
-TERMUX_PKG_REVISION=4
-TERMUX_PKG_DEPENDS="imlib2, libx11, libxft, python2, python2-xlib"
+TERMUX_PKG_REVISION=6
 TERMUX_PKG_SRCURL=http://downloads.sourceforge.net/sourceforge/pypanel/PyPanel-${TERMUX_PKG_VERSION}.tar.gz
 TERMUX_PKG_SHA256=4e612b43c61b3a8af7d57a0364f6cd89df481dc41e20728afa643e9e3546e911
+TERMUX_PKG_DEPENDS="imlib2, libandroid-shmem, libx11, libxft, python2, python2-xlib"
 TERMUX_PKG_BUILD_IN_SRC=yes
 TERMUX_PKG_CONFFILES="etc/pypanelrc"
 
 termux_step_make () {
-    return
-}
-
-termux_step_make_install () {
     "${CC}" -DNDEBUG \
             -fwrapv \
             -Wall \
@@ -38,13 +34,11 @@ termux_step_make_install () {
             -lImlib2 \
             -lpython2.7 \
             -lX11 \
+            -landroid-shmem \
             -o ppmodule.so
+}
 
-    if [ -z "${TERMUX_DEBUG}" ]; then
-        ${STRIP} --strip-unneeded ppmodule.so
-    fi
-    ${TERMUX_ELF_CLEANER} ppmodule.so
-
+termux_step_make_install () {
     mkdir -p "${TERMUX_PREFIX}/bin"
     cp -f pypanel "${TERMUX_PREFIX}/bin/pypanel"
     chmod 755 "${TERMUX_PREFIX}/bin/pypanel"
