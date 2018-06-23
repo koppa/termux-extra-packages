@@ -1,6 +1,6 @@
 diff -uNr qemu-2.11.1/configure qemu-2.11.1.mod/configure
 --- qemu-2.11.1/configure	2018-02-14 23:53:22.000000000 +0200
-+++ qemu-2.11.1.mod/configure	2018-06-20 13:27:35.040510580 +0300
++++ qemu-2.11.1.mod/configure	2018-06-24 01:50:55.065794786 +0300
 @@ -2006,23 +2006,10 @@
  LIBS="$LIBS -lz"
  

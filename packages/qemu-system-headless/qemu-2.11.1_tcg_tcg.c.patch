@@ -1,6 +1,6 @@
 diff -uNr qemu-2.11.1/tcg/tcg.c qemu-2.11.1.mod/tcg/tcg.c
 --- qemu-2.11.1/tcg/tcg.c	2018-02-14 23:53:23.000000000 +0200
-+++ qemu-2.11.1.mod/tcg/tcg.c	2018-06-20 13:16:17.167143210 +0300
++++ qemu-2.11.1.mod/tcg/tcg.c	2018-06-24 01:50:55.149128124 +0300
 @@ -3646,7 +3646,7 @@
      /* Enable this block to be able to debug the ELF image file creation.
         One can use readelf, objdump, or other inspection utilities.  */

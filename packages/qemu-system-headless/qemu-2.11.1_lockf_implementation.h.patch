@@ -1,6 +1,6 @@
 diff -uNr qemu-2.11.1/lockf_implementation.h qemu-2.11.1.mod/lockf_implementation.h
 --- qemu-2.11.1/lockf_implementation.h	1970-01-01 03:00:00.000000000 +0300
-+++ qemu-2.11.1.mod/lockf_implementation.h	2018-06-20 13:16:17.137143209 +0300
++++ qemu-2.11.1.mod/lockf_implementation.h	2018-06-24 01:50:55.105794789 +0300
 @@ -0,0 +1,56 @@
 +#ifndef LOCKF_IMPLEMENTATION_H
 +#define LOCKF_IMPLEMENTATION_H

@@ -1,6 +1,6 @@
 diff -uNr qemu-2.11.1/audio/ossaudio.c qemu-2.11.1.mod/audio/ossaudio.c
 --- qemu-2.11.1/audio/ossaudio.c	2018-02-14 23:53:22.000000000 +0200
-+++ qemu-2.11.1.mod/audio/ossaudio.c	2018-06-20 13:16:17.093809873 +0300
++++ qemu-2.11.1.mod/audio/ossaudio.c	2018-06-24 01:50:55.039128118 +0300
 @@ -23,7 +23,7 @@
   */
  #include "qemu/osdep.h"

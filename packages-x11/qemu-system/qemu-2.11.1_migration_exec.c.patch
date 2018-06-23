@@ -1,6 +1,6 @@
 diff -uNr qemu-2.11.1/migration/exec.c qemu-2.11.1.mod/migration/exec.c
 --- qemu-2.11.1/migration/exec.c	2018-02-14 23:53:23.000000000 +0200
-+++ qemu-2.11.1.mod/migration/exec.c	2018-06-20 13:16:17.137143209 +0300
++++ qemu-2.11.1.mod/migration/exec.c	2018-06-24 01:50:55.109128121 +0300
 @@ -28,7 +28,7 @@
  void exec_start_outgoing_migration(MigrationState *s, const char *command, Error **errp)
  {

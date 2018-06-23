@@ -1,6 +1,6 @@
 diff -uNr qemu-2.11.1/hw/usb/ccid-card-emulated.c qemu-2.11.1.mod/hw/usb/ccid-card-emulated.c
 --- qemu-2.11.1/hw/usb/ccid-card-emulated.c	2018-02-14 23:53:22.000000000 +0200
-+++ qemu-2.11.1.mod/hw/usb/ccid-card-emulated.c	2018-06-20 13:16:17.127143208 +0300
++++ qemu-2.11.1.mod/hw/usb/ccid-card-emulated.c	2018-06-24 01:50:55.079128121 +0300
 @@ -411,7 +411,7 @@
      return 0;
  }

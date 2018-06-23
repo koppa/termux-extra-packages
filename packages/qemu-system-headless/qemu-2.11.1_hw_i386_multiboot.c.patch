@@ -1,6 +1,6 @@
 diff -uNr qemu-2.11.1/hw/i386/multiboot.c qemu-2.11.1.mod/hw/i386/multiboot.c
 --- qemu-2.11.1/hw/i386/multiboot.c	2018-02-14 23:53:22.000000000 +0200
-+++ qemu-2.11.1.mod/hw/i386/multiboot.c	2018-06-20 13:16:17.123809874 +0300
++++ qemu-2.11.1.mod/hw/i386/multiboot.c	2018-06-24 01:50:55.075794787 +0300
 @@ -192,11 +192,6 @@
          int kernel_size;
          fclose(f);

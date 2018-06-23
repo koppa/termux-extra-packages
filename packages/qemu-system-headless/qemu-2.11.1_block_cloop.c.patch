@@ -1,6 +1,6 @@
 diff -uNr qemu-2.11.1/block/cloop.c qemu-2.11.1.mod/block/cloop.c
 --- qemu-2.11.1/block/cloop.c	2018-02-14 23:53:22.000000000 +0200
-+++ qemu-2.11.1.mod/block/cloop.c	2018-06-20 13:16:17.097143207 +0300
++++ qemu-2.11.1.mod/block/cloop.c	2018-06-24 01:50:55.045794785 +0300
 @@ -47,7 +47,7 @@
  
  static int cloop_probe(const uint8_t *buf, int buf_size, const char *filename)

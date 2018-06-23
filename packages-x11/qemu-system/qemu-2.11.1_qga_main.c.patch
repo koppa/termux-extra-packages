@@ -1,6 +1,6 @@
 diff -uNr qemu-2.11.1/qga/main.c qemu-2.11.1.mod/qga/main.c
 --- qemu-2.11.1/qga/main.c	2018-02-14 23:53:23.000000000 +0200
-+++ qemu-2.11.1.mod/qga/main.c	2018-06-20 13:16:17.147143209 +0300
++++ qemu-2.11.1.mod/qga/main.c	2018-06-24 01:50:55.115794789 +0300
 @@ -41,6 +41,8 @@
  #endif
  #endif
