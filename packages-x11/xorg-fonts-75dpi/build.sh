@@ -3,6 +3,7 @@ TERMUX_PKG_MAINTAINER="Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr"
 TERMUX_PKG_HOMEPAGE=https://xorg.freedesktop.org/
 TERMUX_PKG_DESCRIPTION="X.org 75dpi fonts"
 TERMUX_PKG_VERSION=1.0.3
+TERMUX_PKG_REVISION=1
 TERMUX_PKG_DEPENDS="fontconfig-utils, xorg-font-util, xorg-fonts-alias, xorg-fonts-encodings, xorg-mkfontdir, xorg-mkfontscale"
 TERMUX_PKG_CONFLICTS="xorg-fonts-lite"
 TERMUX_PKG_PLATFORM_INDEPENDENT=true
@@ -59,14 +60,4 @@ termux_step_make_install() {
 
 termux_step_post_make_install() {
     rm -f "${TERMUX_PREFIX}"/share/fonts/75dpi/fonts.*
-}
-
-termux_step_create_debscripts() {
-    ## POST INSTALL:
-    {
-        echo "#!${TERMUX_PREFIX}/bin/sh"
-        echo "mkfontscale ${TERMUX_PREFIX}/share/fonts/75dpi"
-        echo "mkfontdir ${TERMUX_PREFIX}/share/fonts/75dpi"
-        echo "exit 0"
-    } > postinst
 }
