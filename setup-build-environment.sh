@@ -14,8 +14,8 @@ apt upgrade -y
 ## for adwaita-icon-theme
 PACKAGES+=" gnome-common gtk-3-examples libgtk-3-bin"
 
-## for libgtk3
-PACKAGES+=" libgdk-pixbuf2.0-dev"
+## for libgtk2, libgtk3
+PACKAGES+=" gtk-doc-tools libgdk-pixbuf2.0-dev"
 
 ## for python-based packages (e.g. python2-xlib)
 PACKAGES+=" python-pip python3-pip"
