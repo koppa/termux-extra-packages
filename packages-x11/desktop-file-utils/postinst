@@ -1,7 +1,9 @@
 #!/data/data/com.termux/files/usr/bin/sh
 set -e
 
-update-desktop-database -q
+if [ -d "/data/data/com.termux/files/usr/share/applications" ]; then
+    update-desktop-database -q
+fi
 
 if [ "${1}" = "triggered" ]; then
     exit 0
