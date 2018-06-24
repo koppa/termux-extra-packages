@@ -59,3 +59,9 @@ sudo bash setup-build-environment.sh
 
 ## Screenshot
 ![alt text](/screenshots/vnc_screen_anim.gif "TigerVNC + FluxBox")
+
+## External links
+* Termux home page: https://termux.com/
+* Termux Wiki: https://wiki.termux.com/wiki/Main_Page
+* Termux App: https://github.com/termux/termux-app
+* Termux Packages: https://github.com/termux/termux-packages
