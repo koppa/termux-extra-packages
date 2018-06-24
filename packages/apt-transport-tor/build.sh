@@ -10,11 +10,11 @@ TERMUX_PKG_BUILD_IN_SRC=true
 
 termux_step_pre_configure() {
     ## we need apt-pkg headers
-    if [ -d "${TERMUX_TOPDIR}/apt/src" ]; then
-        export CPPFLAGS="${CPPFLAGS} -I${TERMUX_TOPDIR}/apt/src"
+    if [ -d "${TERMUX_TOPDIR}/apt/build" ]; then
+        export CPPFLAGS="${CPPFLAGS} -I${TERMUX_TOPDIR}/apt/build/include"
     else
         echo
-        echo "Can't access source directory of APT."
+        echo "Can't access build directory of APT."
         echo
         exit 1
     fi
