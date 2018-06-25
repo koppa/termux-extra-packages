@@ -1,6 +1,6 @@
 diff -uNr srelay-0.4.8p1/configure srelay-0.4.8p1.mod/configure
 --- srelay-0.4.8p1/configure	2017-12-25 05:10:37.000000000 +0200
-+++ srelay-0.4.8p1.mod/configure	2018-06-26 00:38:08.035901107 +0300
++++ srelay-0.4.8p1.mod/configure	2018-06-26 00:55:42.529288733 +0300
 @@ -3998,41 +3998,6 @@
  	elif test "$OS" = "SOLARIS"; then
  	    LDFLAGS="$LDFLAGS -lpthread"

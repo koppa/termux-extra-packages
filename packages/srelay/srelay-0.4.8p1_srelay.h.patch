@@ -1,6 +1,6 @@
 diff -uNr srelay-0.4.8p1/srelay.h srelay-0.4.8p1.mod/srelay.h
 --- srelay-0.4.8p1/srelay.h	2017-12-25 05:10:37.000000000 +0200
-+++ srelay-0.4.8p1.mod/srelay.h	2018-06-26 00:38:08.049234440 +0300
++++ srelay-0.4.8p1.mod/srelay.h	2018-06-26 00:55:42.545955400 +0300
 @@ -106,13 +106,13 @@
  #define version  "srelay 0.4.8p1 2017/12/25 (Tomo.M)"
  
