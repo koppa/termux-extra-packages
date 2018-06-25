@@ -1,0 +1,11 @@
+diff -uNr cpulimit-0.2/tests/Makefile cpulimit-0.2.mod/tests/Makefile
+--- cpulimit-0.2/tests/Makefile	2015-06-17 09:46:59.000000000 +0300
++++ cpulimit-0.2.mod/tests/Makefile	2018-06-25 23:47:34.385744912 +0300
+@@ -2,7 +2,6 @@
+ CFLAGS?=-Wall -g
+ TARGETS=busy process_iterator_test
+ SRC=../src
+-SYSLIBS?=-lpthread
+ LIBS=$(SRC)/list.o $(SRC)/process_iterator.o $(SRC)/process_group.o
+ UNAME := $(shell uname)
+ 
