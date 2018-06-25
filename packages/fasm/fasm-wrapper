@@ -1,0 +1,16 @@
+#!/data/data/com.termux/files/usr/bin/sh
+
+PROGRAM="/data/data/com.termux/files/usr/libexec/x86-bin/fasm"
+QEMU=$(command -v qemu-i386)
+
+if [ -z "${QEMU}" ]; then
+    echo "[!] ERROR: qemu-user-i386 is not installed."
+    exit 1
+fi
+
+if [ ! -e "${PROGRAM}" ]; then
+    echo "[!] Executable '${PROGRAM}' is not found."
+    exot 1
+fi
+
+exec "${QEMU}" "${PROGRAM}" "${@}"
