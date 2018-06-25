@@ -1,5 +1,7 @@
 # Termux Extra Packages
 
+[![Build Status](https://travis-ci.org/xeffyr/termux-extra-packages.svg?branch=master)](https://travis-ci.org/xeffyr/termux-extra-packages)
+
 Here are located build scripts and patches for packages which haven't been added to the [official](https://github.com/termux/termux-packages) Termux repository.
 
 * [/packages](/packages) - command line tools and libraries
