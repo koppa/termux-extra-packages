@@ -3,6 +3,7 @@ TERMUX_PKG_MAINTAINER="Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr"
 TERMUX_PKG_HOMEPAGE=https://restic.net/
 TERMUX_PKG_DESCRIPTION="Restic's REST backend API server"
 TERMUX_PKG_VERSION=0.9.7
+TERMUX_PKG_REVISION=1
 TERMUX_PKG_SRCURL=https://github.com/restic/rest-server/archive/v${TERMUX_PKG_VERSION}.tar.gz
 TERMUX_PKG_SHA256=922811cfc49879f7086fe559d25ec1bb4169b2c4a5df3559b499e6292f435661
 TERMUX_PKG_BUILD_IN_SRC=true
