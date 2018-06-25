@@ -11,24 +11,22 @@ TERMUX_PKG_BUILD_IN_SRC=true
 
 termux_step_make() {
     termux_setup_golang
-
     _GOARCH=${GOARCH}
     unset GOOS GOARCH
 
     ## build for host and regenerate manpages
-    go build build.go
-    ./build --goos linux \
-            --goarch "amd64"
-    ./restic generate --man doc/man
-    rm -f ./restic
+    go run build.go --goos linux \
+                    --goarch "amd64"
+    ./restic generate --man doc/man && rm -f ./restic
 
     ## finally build for target
-    ./build --enable-cgo \
-            --goos android \
-            --goarch "${_GOARCH}"
+    go run build.go --enable-cgo \
+                    --goos android \
+                    --goarch "${_GOARCH}"
 }
 
 termux_step_make_install() {
     install -Dm755 restic "${TERMUX_PREFIX}/bin/restic"
+    mkdir -p "${TERMUX_PREFIX}/share/man/man1/"
     install -Dm644 doc/man/*.1 "${TERMUX_PREFIX}/share/man/man1/"
 }
