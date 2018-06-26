@@ -1,6 +1,6 @@
 diff -uNr wireshark-2.6.1/ui/cli/Makefile.am wireshark-2.6.1.mod/ui/cli/Makefile.am
 --- wireshark-2.6.1/ui/cli/Makefile.am	2018-05-22 21:53:09.000000000 +0300
-+++ wireshark-2.6.1.mod/ui/cli/Makefile.am	2018-06-24 22:54:01.905443532 +0300
++++ wireshark-2.6.1.mod/ui/cli/Makefile.am	2018-06-26 18:49:28.884971788 +0300
 @@ -83,8 +83,8 @@
  DISTCLEANFILES = \
  	$(NODIST_GENERATED_FILES)

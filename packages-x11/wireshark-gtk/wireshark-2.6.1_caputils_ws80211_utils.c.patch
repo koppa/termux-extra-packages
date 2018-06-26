@@ -1,6 +1,6 @@
 diff -uNr wireshark-2.6.1/caputils/ws80211_utils.c wireshark-2.6.1.mod/caputils/ws80211_utils.c
 --- wireshark-2.6.1/caputils/ws80211_utils.c	2018-05-22 21:53:08.000000000 +0300
-+++ wireshark-2.6.1.mod/caputils/ws80211_utils.c	2018-06-24 22:26:15.468691065 +0300
++++ wireshark-2.6.1.mod/caputils/ws80211_utils.c	2018-06-26 18:49:28.794971784 +0300
 @@ -680,7 +680,7 @@
  
  	/* Update names of user created monitor interfaces */
