@@ -6,7 +6,7 @@ diff -uNr wireshark-2.6.1/plugins/epan/wimax/Makefile.in wireshark-2.6.1.mod/plu
  
  wimax.la: $(wimax_la_OBJECTS) $(wimax_la_DEPENDENCIES) $(EXTRA_wimax_la_DEPENDENCIES) 
 -	$(AM_V_CCLD)$(wimax_la_LINK) -rpath $(epan_plugindir) $(wimax_la_OBJECTS) $(wimax_la_LIBADD) $(LIBS)
-+	$(AM_V_CCLD)$(wimax_la_LINK) -rpath $(epan_plugindir) $(wimax_la_OBJECTS) $(wimax_la_LIBADD) -L$(top_srcdir)/epan/.libs -L$(top_srcdir)/wsutil/.libs -L$(top_srcdir)/wiretap/.libs -lwireshark $(LIBS)
++	$(AM_V_CCLD)$(wimax_la_LINK) -rpath $(epan_plugindir) $(wimax_la_OBJECTS) $(wimax_la_LIBADD) -L$(top_srcdir)/epan/.libs -L$(top_srcdir)/wsutil/.libs -L$(top_srcdir)/wiretap/.libs -lwireshark -lglib-2.0 $(LIBS)
  
  mostlyclean-compile:
  	-rm -f *.$(OBJEXT)
