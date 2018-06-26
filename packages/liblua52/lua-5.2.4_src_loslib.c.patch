@@ -1,0 +1,12 @@
+diff -uNr lua-5.2.4/src/loslib.c lua-5.2.4.mod/src/loslib.c
+--- lua-5.2.4/src/loslib.c	2013-04-12 21:48:47.000000000 +0300
++++ lua-5.2.4.mod/src/loslib.c	2018-06-26 15:29:22.554368927 +0300
+@@ -46,7 +46,7 @@
+ #include <unistd.h>
+ #define LUA_TMPNAMBUFSIZE	32
+ #define lua_tmpnam(b,e) { \
+-        strcpy(b, "/tmp/lua_XXXXXX"); \
++        strcpy(b, "@TERMUX_PREFIX@/tmp/lua_XXXXXX"); \
+         e = mkstemp(b); \
+         if (e != -1) close(e); \
+         e = (e == -1); }
