@@ -10,7 +10,6 @@ TERMUX_PKG_BUILD_IN_SRC=yes
 
 termux_step_configure() {
     sed "s/%VER%/${TERMUX_PKG_VERSION%.*}/g;s/%REL%/${TERMUX_PKG_VERSION}/g" ${TERMUX_PKG_BUILDER_DIR}/lua.pc > lua.pc
-    sed -r -e '/^LUA_(SO|A|T)=/ s/lua/lua5.2/' -e '/^LUAC_T=/ s/luac/luac5.2/' -i src/Makefile
 }
 
 termux_step_make() {
