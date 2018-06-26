@@ -3,10 +3,10 @@ TERMUX_PKG_MAINTAINER="Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr"
 TERMUX_PKG_HOMEPAGE=https://www.qemu.org
 TERMUX_PKG_DESCRIPTION="A generic and open source machine emulator and virtualizer (i386, x86_64 targets)"
 TERMUX_PKG_VERSION=2.12.0
-TERMUX_PKG_REVISION=1
+TERMUX_PKG_REVISION=2
 TERMUX_PKG_SRCURL=https://download.qemu.org/qemu-${TERMUX_PKG_VERSION}.tar.xz
 TERMUX_PKG_SHA256=e69301f361ff65bf5dabd8a19196aeaa5613c1b5ae1678f0823bdf50e7d5c6fc
-TERMUX_PKG_DEPENDS="glib, libandroid-shmem, libandroid-support, libbz2, libcurl, libgnutls, libjpeg-turbo, liblzo, libnettle, libpixman, libpng, libsasl, libseccomp, libssh2, libutil, ncurses"
+TERMUX_PKG_DEPENDS="glib, libandroid-shmem, libandroid-support, libbz2, libc++, libcurl, libgnutls, libjpeg-turbo, liblzo, libnettle, libpixman, libpng, libsasl, libseccomp, libssh2, libutil, ncurses"
 TERMUX_PKG_BUILD_IN_SRC=true
 TERMUX_PKG_RM_AFTER_INSTALL="
 bin/qemu-nbd
