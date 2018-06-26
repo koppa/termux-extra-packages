@@ -14,7 +14,7 @@ termux_step_configure() {
 
 termux_step_make() {
     make -j ${TERMUX_MAKE_PROCESSES} \
-            MYCFLAGS="${CFLAGS}" \
+            MYCFLAGS="${CFLAGS} -fPIC" \
             MYLDFLAGS="${LDFLAGS}" \
             CC="${CC}" \
             CXX="${CXX}" \
