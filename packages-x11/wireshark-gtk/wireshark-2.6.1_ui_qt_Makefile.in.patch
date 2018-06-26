@@ -1,0 +1,14 @@
+diff -uNr wireshark-2.6.1/ui/qt/Makefile.in wireshark-2.6.1.mod/ui/qt/Makefile.in
+--- wireshark-2.6.1/ui/qt/Makefile.in	2018-05-22 21:53:31.000000000 +0300
++++ wireshark-2.6.1.mod/ui/qt/Makefile.in	2018-06-24 22:54:11.875444045 +0300
+@@ -2751,8 +2751,8 @@
+ .l.c:
+ 	$(AM_V_LEX)$(LEX) -o$@ --header-file=$(@:.c=_lex.h) $<
+ 
+-wireshark-tap-register.c: $(WIRESHARK_QT_TAP_SRC) ../make-taps
+-	$(AM_V_GEN)../make-taps $@ $(filter %.cpp,$^)
++wireshark-tap-register.c: $(WIRESHARK_QT_TAP_SRC) $(top_srcdir)/make-taps.prebuilt
++	$(AM_V_GEN)$(top_srcdir)/make-taps.prebuilt $@ $(filter %.cpp,$^)
+ 
+ #
+ # The Qt toolchain uses the naming convention moc_FOO.cpp. Should we do the same?

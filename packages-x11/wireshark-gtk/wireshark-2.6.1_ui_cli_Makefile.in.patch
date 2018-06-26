@@ -1,0 +1,14 @@
+diff -uNr wireshark-2.6.1/ui/cli/Makefile.in wireshark-2.6.1.mod/ui/cli/Makefile.in
+--- wireshark-2.6.1/ui/cli/Makefile.in	2018-05-22 21:53:30.000000000 +0300
++++ wireshark-2.6.1.mod/ui/cli/Makefile.in	2018-06-24 22:54:47.635445886 +0300
+@@ -949,8 +949,8 @@
+ .l.c:
+ 	$(AM_V_LEX)$(LEX) -o$@ --header-file=$(@:.c=_lex.h) $<
+ 
+-tshark-tap-register.c: $(TSHARK_TAP_SRC) ../make-taps
+-	$(AM_V_GEN)../make-taps $@ $(filter %.c,$^)
++tshark-tap-register.c: $(TSHARK_TAP_SRC) $(top_srcdir)/make-taps.prebuilt
++	$(AM_V_GEN)$(top_srcdir)/make-taps.prebuilt $@ $(filter %.c,$^)
+ 
+ doxygen:
+ @HAVE_DOXYGEN_TRUE@	$(DOXYGEN) doxygen.cfg
