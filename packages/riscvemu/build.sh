@@ -25,8 +25,18 @@ termux_step_make_install() {
     fi
 
     ln -sfr "${TERMUX_PREFIX}/bin/riscvemu64" "${TERMUX_PREFIX}/bin/riscvemu"
+    mv -f "${TERMUX_PREFIX}/bin/build_filelist" "${TERMUX_PREFIX}/bin/riscvemu-build_filelist"
+    mv -f "${TERMUX_PREFIX}/bin/splitimg" "${TERMUX_PREFIX}/bin/riscvemu-splitimg"
 }
 
 termux_step_post_make_install() {
-    return
+    local SAMPLES_URL=https://bellard.org/riscvemu/diskimage-linux-riscv-2017-08-06.2.tar.gz
+
+    curl -o samples.tar.gz "${SAMPLES_URL}"
+    mkdir -p "${TERMUX_PREFIX}/share/riscvemu"
+    tar xf samples.tar.gz -C "${TERMUX_PREFIX}/share/riscvemu" --strip-components=1
+}
+
+termux_step_create_debscripts() {
+    cp "${TERMUX_PKG_BUILDER_DIR}/postinst" ./
 }
