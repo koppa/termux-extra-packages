@@ -1,0 +1,24 @@
+diff -uNr riscvemu-2017-08-06/fs_disk.c riscvemu-2017-08-06.mod/fs_disk.c
+--- riscvemu-2017-08-06/fs_disk.c	2017-08-06 15:30:12.000000000 +0300
++++ riscvemu-2017-08-06.mod/fs_disk.c	2018-06-27 23:22:08.002138827 +0300
+@@ -290,6 +290,20 @@
+     return 0;
+ }
+ 
++
++
++struct DIR {
++  int fd_;
++};
++static long telldir(struct DIR *dirp)
++{
++    return (long) lseek(dirp->fd_, 0, SEEK_CUR);
++}
++static void seekdir(DIR *dirp, long loc)
++{
++    (void) lseek(dirp->fd_, loc, SEEK_SET);
++}
++
+ static int fs_readdir(FSDevice *fs, FSFile *f, uint64_t offset,
+                       uint8_t *buf, int count)
+ {

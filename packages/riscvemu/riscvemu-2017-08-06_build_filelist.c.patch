@@ -1,0 +1,17 @@
+diff -uNr riscvemu-2017-08-06/build_filelist.c riscvemu-2017-08-06.mod/build_filelist.c
+--- riscvemu-2017-08-06/build_filelist.c	2017-08-06 15:30:12.000000000 +0300
++++ riscvemu-2017-08-06.mod/build_filelist.c	2018-06-27 23:04:53.832086899 +0300
+@@ -33,10 +33,12 @@
+ #include <fcntl.h>
+ #include <dirent.h>
+ #include <errno.h>
+-
+ #include "cutils.h"
+ #include "fs_utils.h"
+ 
++#define major(dev)  ((dev)>>8)
++#define minor(dev)  ((dev) & 0xff)
++
+ void print_str(FILE *f, const char *str)
+ {
+     const char *s;
