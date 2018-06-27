@@ -65,7 +65,7 @@ else
 fi
 
 echo -n "[*] Archiving built packages... "
-if tar -cvf "${PACKAGES_ARCHIVE_FILE}" debs "${BUILD_LOG_FILE}" > /dev/null 2>&1; then
+if tar -cvf "${PACKAGES_ARCHIVE_FILE}" debs "${BUILD_LOG_FILE}" "setup-build-environment.log" > /dev/null 2>&1; then
     echo "ok"
 else
     echo "fail"
