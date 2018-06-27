@@ -1,0 +1,33 @@
+diff -uNr riscvemu-2017-08-06/riscvemu.c riscvemu-2017-08-06.mod/riscvemu.c
+--- riscvemu-2017-08-06/riscvemu.c	2017-08-06 15:30:12.000000000 +0300
++++ riscvemu-2017-08-06.mod/riscvemu.c	2018-06-27 23:04:53.842086900 +0300
+@@ -241,7 +241,7 @@
+     {
+         static FILE *f;
+         if (!f)
+-            f = fopen("/tmp/read_sect.txt", "wb");
++            f = fopen("@TERMUX_PREFIX@/tmp/read_sect.txt", "wb");
+         fprintf(f, "%" PRId64 " %d\n", sector_num, n);
+     }
+ #endif
+@@ -420,9 +420,9 @@
+     EthernetDevice *net;
+     TunState *s;
+     
+-    fd = open("/dev/net/tun", O_RDWR);
++    fd = open("/dev/tun", O_RDWR);
+     if (fd < 0) {
+-        fprintf(stderr, "Error: could not open /dev/net/tun\n");
++        fprintf(stderr, "Error: could not open /dev/tun\n");
+         return NULL;
+     }
+     memset(&ifr, 0, sizeof(ifr));
+@@ -430,7 +430,7 @@
+     pstrcpy(ifr.ifr_name, sizeof(ifr.ifr_name), ifname);
+     ret = ioctl(fd, TUNSETIFF, (void *) &ifr);
+     if (ret != 0) {
+-        fprintf(stderr, "Error: could not configure /dev/net/tun\n");
++        fprintf(stderr, "Error: could not configure /dev/tun\n");
+         close(fd);
+         return NULL;
+     }

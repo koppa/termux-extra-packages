@@ -1,0 +1,12 @@
+diff -uNr riscvemu-2017-08-06/riscv_cpu.c riscvemu-2017-08-06.mod/riscv_cpu.c
+--- riscvemu-2017-08-06/riscv_cpu.c	2017-08-06 15:30:12.000000000 +0300
++++ riscvemu-2017-08-06.mod/riscv_cpu.c	2018-06-27 23:04:53.838753566 +0300
+@@ -281,7 +281,7 @@
+ void log_vprintf(const char *fmt, va_list ap)
+ {
+     if (!log_file)
+-        log_file = fopen("/tmp/riscemu.log", "wb");
++        log_file = fopen("@TERMUX_PREFIX@/tmp/riscemu.log", "wb");
+     vfprintf(log_file, fmt, ap);
+ }
+ #else

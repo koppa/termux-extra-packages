@@ -1,0 +1,12 @@
+diff -uNr riscvemu-2017-08-06/fs_net.c riscvemu-2017-08-06.mod/fs_net.c
+--- riscvemu-2017-08-06/fs_net.c	2017-08-06 15:30:12.000000000 +0300
++++ riscvemu-2017-08-06.mod/fs_net.c	2018-06-27 23:04:53.835420234 +0300
+@@ -1660,7 +1660,7 @@
+ static FSDevice *fs_import_fs;
+ #endif
+ 
+-#define DEFAULT_IMPORT_FILE_PATH "/tmp"
++#define DEFAULT_IMPORT_FILE_PATH "@TERMUX_PREFIX@/tmp"
+ 
+ FSDevice *fs_net_init(const char *url, void (*start_cb)(void *opaque),
+                       void *start_opaque)
