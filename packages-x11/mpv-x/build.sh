@@ -13,7 +13,7 @@ TERMUX_PKG_REPLACES="mpv"
 TERMUX_PKG_RM_AFTER_INSTALL="share/icons share/applications"
 
 termux_step_pre_configure() {
-	LDFLAGS+=" -landroid-glob"
+	LDFLAGS+=" -landroid-glob -landroid-shmem"
 }
 
 termux_step_make_install () {
