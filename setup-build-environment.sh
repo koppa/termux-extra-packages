@@ -9,10 +9,7 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 ## Log to stdout by default
-SETUP_LOG_FILE=/proc/self/fd/1
-if [ -n "${TRAVIS_BUILD_ID}" ]; then
-    [ -z "${SETUP_LOG_FILE}" ] && SETUP_LOG_FILE="setup-build-environment.log"
-fi
+[ -z "${SETUP_LOG_FILE}" ] && SETUP_LOG_FILE=/proc/self/fd/1
 
 PACKAGES=""
 
@@ -31,9 +28,9 @@ PACKAGES="${PACKAGES} xfonts-utils"
 ## for openjdk-9-jre-headless
 PACKAGES="${PACKAGES} zip"
 
-[ -n "${TRAVIS_BUILD_ID}" ] && echo "[*] Updating system software..."
+echo "[*] Updating system software..."
 apt update --quiet >> "${SETUP_LOG_FILE}" 2>&1
 apt upgrade --yes --quiet >> "${SETUP_LOG_FILE}" 2>&1
 
-[ -n "${TRAVIS_BUILD_ID}" ] && echo "[*] Installing additional software..."
+echo "[*] Installing additional software..."
 apt install --yes --quiet ${PACKAGES} >> "${SETUP_LOG_FILE}" 2>&1

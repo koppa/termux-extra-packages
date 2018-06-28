@@ -51,7 +51,7 @@ if [ ! -e "./setup-build-environment.sh" ]; then
         echo "[!] Failed to copy setup script to build environment."
         exit 1
     fi
-    if ! ./scripts/run-docker.sh sudo env TRAVIS_BUILD_ID="${TRAVIS_BUILD_ID}" SETUP_LOG_FILE="${SETUP_LOG_FILE}" ./setup-build-environment.sh; then
+    if ! ./scripts/run-docker.sh sudo env SETUP_LOG_FILE="${SETUP_LOG_FILE}" ./setup-build-environment.sh; then
         echo "[!] Setup script failed."
         exit 1
     fi
