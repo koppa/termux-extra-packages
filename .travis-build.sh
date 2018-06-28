@@ -21,20 +21,22 @@ timed_message() {
     done
 }
 
-echo -n "[*] Cloning build environment (termux/termux-packages.git)... "
-if git clone "https://github.com/termux/termux-packages.git" > /dev/null 2>&1; then
-    echo "ok"
-else
-    echo "fail"
-    exit 1
-fi
+if [ ! -e "./termux-packages" ]; then
+    echo -n "[*] Cloning build environment (termux/termux-packages.git)... "
+    if git clone "https://github.com/termux/termux-packages.git" > /dev/null 2>&1; then
+        echo "ok"
+    else
+        echo "fail"
+        exit 1
+    fi
 
-echo -n "[*] Copying extra packages to build environment... "
-if cp -a ./packages/* ./packages-x11/* ./termux-packages/packages/ > /dev/null 2>&1; then
-    echo "ok"
-else
-    echo "fail"
-    exit 1
+    echo -n "[*] Copying extra packages to build environment... "
+    if cp -a ./packages/* ./packages-x11/* ./termux-packages/packages/ > /dev/null 2>&1; then
+        echo "ok"
+    else
+        echo "fail"
+        exit 1
+    fi
 fi
 
 echo "[*] Preparing build environment..."
