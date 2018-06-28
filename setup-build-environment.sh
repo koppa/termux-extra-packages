@@ -8,10 +8,10 @@ if [ "$(id -u)" != "0" ]; then
     exit 1
 fi
 
-LOG_FILE=/proc/self/fd/1
+## Log to stdout by default
+SETUP_LOG_FILE=/proc/self/fd/1
 if [ -n "${TRAVIS_BUILD_ID}" ]; then
-    [ -f "${LOG_FILE}" ] && truncate -s 0 "${LOG_FILE}"
-    LOG_FILE="setup-build-environment.log"
+    [ -z "${SETUP_LOG_FILE}" ] && SETUP_LOG_FILE="setup-build-environment.log"
 fi
 
 PACKAGES=""
@@ -32,8 +32,8 @@ PACKAGES="${PACKAGES} xfonts-utils"
 PACKAGES="${PACKAGES} zip"
 
 [ -n "${TRAVIS_BUILD_ID}" ] && echo "[*] Updating system software..."
-apt update --quiet > "${LOG_FILE}" 2>&1
-apt upgrade --yes --quiet > "${LOG_FILE}" 2>&1
+apt update --quiet >> "${SETUP_LOG_FILE}" 2>&1
+apt upgrade --yes --quiet >> "${SETUP_LOG_FILE}" 2>&1
 
 [ -n "${TRAVIS_BUILD_ID}" ] && echo "[*] Installing additional software..."
-apt install --yes --quiet ${PACKAGES} > "${LOG_FILE}" 2>&1
+apt install --yes --quiet ${PACKAGES} >> "${SETUP_LOG_FILE}" 2>&1

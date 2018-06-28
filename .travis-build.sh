@@ -1,9 +1,13 @@
 #!/bin/bash
 set -o nounset
 
+## Change this if you want to build packages to different architecture.
 TARGET_ARCHITECTURE="aarch64"
 
+##############################################################################
+
 BUILD_LOG_FILE="termux-build.log"
+SETUP_LOG_FILE="setup-build-environment.log"
 BUILD_FINISHED_CONTROL_FILE="/tmp/.build-finished"
 PACKAGES_ARCHIVE_FILE="termux-extra-packages_${TARGET_ARCHITECTURE}.tar"
 
@@ -41,8 +45,17 @@ fi
 
 echo "[*] Preparing build environment..."
 cd ./termux-packages || exit 1
-cp ../setup-build-environment.sh ./
-./scripts/run-docker.sh sudo env TRAVIS_BUILD_ID=${TRAVIS_BUILD_ID} ./setup-build-environment.sh
+
+if [ ! -e "./setup-build-environment.sh" ]; then
+    if ! cp ../setup-build-environment.sh ./ > /dev/null 2>&1; then
+        echo "[!] Failed to copy setup script to build environment."
+        exit 1
+    fi
+    if ! ./scripts/run-docker.sh sudo env TRAVIS_BUILD_ID="${TRAVIS_BUILD_ID}" SETUP_LOG_FILE="${SETUP_LOG_FILE}" ./setup-build-environment.sh; then
+        echo "[!] Setup script failed."
+        exit 1
+    fi
+fi
 
 echo
 echo "PACKAGE BUILD STARTED: ${1}"
@@ -50,7 +63,7 @@ echo
 
 timed_message &
 
-if ./scripts/run-docker.sh ./build-package.sh -a "${TARGET_ARCHITECTURE}" "${1}" > "${BUILD_LOG_FILE}" 2>&1; then
+if ./scripts/run-docker.sh ./build-package.sh -a "${TARGET_ARCHITECTURE}" "${1}" >> "${BUILD_LOG_FILE}" 2>&1; then
     touch "${BUILD_FINISHED_CONTROL_FILE}"
     echo
     echo "BUILD FINISHED SUCCESSFULLY"
@@ -67,7 +80,7 @@ else
 fi
 
 echo -n "[*] Archiving built packages... "
-if tar -cvf "${PACKAGES_ARCHIVE_FILE}" debs "${BUILD_LOG_FILE}" "setup-build-environment.log" > /dev/null 2>&1; then
+if tar -cvf "${PACKAGES_ARCHIVE_FILE}" debs "${BUILD_LOG_FILE}" "${SETUP_LOG_FILE}" > /dev/null 2>&1; then
     echo "ok"
 else
     echo "fail"
