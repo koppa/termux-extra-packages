@@ -25,9 +25,9 @@ timed_message() {
     done
 }
 
-if [ ! -e "./termux-packages" ]; then
-    echo -n "[*] Cloning build environment (termux/termux-packages.git)... "
-    if git clone "https://github.com/termux/termux-packages.git" > /dev/null 2>&1; then
+if [ ! -e "./termux-packages/.initialized" ]; then
+    echo -n "[*] Initializing git submodules (termux/termux-packages.git)... "
+    if git submodule update --init --recursive > /dev/null 2>&1; then
         echo "ok"
     else
         echo "fail"
@@ -41,6 +41,8 @@ if [ ! -e "./termux-packages" ]; then
         echo "fail"
         exit 1
     fi
+
+	touch ./termux-packages/.initialized
 fi
 
 echo "[*] Preparing build environment..."
