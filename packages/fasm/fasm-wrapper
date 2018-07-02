@@ -10,7 +10,7 @@ fi
 
 if [ ! -e "${PROGRAM}" ]; then
     echo "[!] Executable '${PROGRAM}' is not found."
-    exot 1
+    exit 1
 fi
 
 exec "${QEMU}" "${PROGRAM}" "${@}"
