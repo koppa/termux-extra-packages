@@ -1,0 +1,16 @@
+#!/data/data/com.termux/files/usr/bin/sh
+
+PROGRAM="/data/data/com.termux/files/usr/libexec/x86_64-bin/pandoc-citeproc"
+QEMU=$(command -v qemu-x86_64)
+
+if [ -z "${QEMU}" ]; then
+    echo "[!] ERROR: qemu-user-x86_64 is not installed."
+    exit 1
+fi
+
+if [ ! -e "${PROGRAM}" ]; then
+    echo "[!] Executable '${PROGRAM}' is not found."
+    exit 1
+fi
+
+exec "${QEMU}" "${PROGRAM}" "${@}"
