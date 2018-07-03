@@ -13,7 +13,7 @@ To use X11-enabled packages, you need to install [VNC Viewer](https://play.googl
 ## How to enable Extra Packages in Termux
 1. You need to add PGP key to the APT's keyring:
 ```
-pkg install dirmngr gnupg-curl
+pkg install dirmngr
 apt-key adv --keyserver pool.sks-keyservers.net --recv 9D6D488416B493F0
 ```
 
