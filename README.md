@@ -39,7 +39,7 @@ git clone https://github.com/xeffyr/termux-extra-packages.git
 2. Clone build environment ([termux-packages](https://github.com/termux/termux-packages)):
 ```
 cd ./termux-extra-packages
-git clone https://github.com/termux/termux-packages.git
+git submodule update --init
 ```
 
 3. Put all packages to build environment:
