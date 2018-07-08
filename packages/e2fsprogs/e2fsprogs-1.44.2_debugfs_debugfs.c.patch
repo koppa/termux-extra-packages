@@ -1,0 +1,12 @@
+diff -uNr e2fsprogs-1.44.2/debugfs/debugfs.c e2fsprogs-1.44.2.mod/debugfs/debugfs.c
+--- e2fsprogs-1.44.2/debugfs/debugfs.c	2018-05-16 02:42:44.000000000 +0300
++++ e2fsprogs-1.44.2.mod/debugfs/debugfs.c	2018-07-08 16:38:18.491650741 +0300
+@@ -85,7 +85,7 @@
+ 	 */
+ 	tdb_dir = ss_safe_getenv("E2FSPROGS_UNDO_DIR");
+ 	if (!tdb_dir)
+-		tdb_dir = "/var/lib/e2fsprogs";
++		tdb_dir = "@TERMUX_PREFIX@/var/lib/e2fsprogs";
+ 
+ 	if (!strcmp(tdb_dir, "none") || (tdb_dir[0] == 0) ||
+ 	    access(tdb_dir, W_OK))

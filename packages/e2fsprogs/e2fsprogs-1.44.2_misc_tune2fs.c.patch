@@ -1,0 +1,12 @@
+diff -uNr e2fsprogs-1.44.2/misc/tune2fs.c e2fsprogs-1.44.2.mod/misc/tune2fs.c
+--- e2fsprogs-1.44.2/misc/tune2fs.c	2018-05-16 02:42:44.000000000 +0300
++++ e2fsprogs-1.44.2.mod/misc/tune2fs.c	2018-07-08 16:39:12.501980734 +0300
+@@ -2762,7 +2762,7 @@
+ 	 */
+ 	tdb_dir = getenv("E2FSPROGS_UNDO_DIR");
+ 	if (!tdb_dir)
+-		tdb_dir = "/var/lib/e2fsprogs";
++		tdb_dir = "@TERMUX_PREFIX@/var/lib/e2fsprogs";
+ 
+ 	if (!strcmp(tdb_dir, "none") || (tdb_dir[0] == 0) ||
+ 	    access(tdb_dir, W_OK))

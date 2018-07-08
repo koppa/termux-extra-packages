@@ -1,0 +1,16 @@
+diff -uNr e2fsprogs-1.44.2/lib/uuid/uuidd.h e2fsprogs-1.44.2.mod/lib/uuid/uuidd.h
+--- e2fsprogs-1.44.2/lib/uuid/uuidd.h	2018-05-16 02:42:44.000000000 +0300
++++ e2fsprogs-1.44.2.mod/lib/uuid/uuidd.h	2018-07-08 16:37:11.084573343 +0300
+@@ -35,10 +35,10 @@
+ #ifndef _UUID_UUIDD_H
+ #define _UUID_UUIDD_H
+ 
+-#define UUIDD_DIR		"/var/lib/libuuid"
++#define UUIDD_DIR		"@TERMUX_PREFIX@/var/lib/libuuid"
+ #define UUIDD_SOCKET_PATH	UUIDD_DIR "/request"
+ #define UUIDD_PIDFILE_PATH	UUIDD_DIR "/uuidd.pid"
+-#define UUIDD_PATH		"/usr/sbin/uuidd"
++#define UUIDD_PATH		"@TERMUX_PREFIX@/bin/uuidd"
+ 
+ #define UUIDD_OP_GETPID			0
+ #define UUIDD_OP_GET_MAXOP		1

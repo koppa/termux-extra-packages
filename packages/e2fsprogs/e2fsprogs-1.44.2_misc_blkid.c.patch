@@ -1,0 +1,12 @@
+diff -uNr e2fsprogs-1.44.2/misc/blkid.c e2fsprogs-1.44.2.mod/misc/blkid.c
+--- e2fsprogs-1.44.2/misc/blkid.c	2018-05-16 02:42:44.000000000 +0300
++++ e2fsprogs-1.44.2.mod/misc/blkid.c	2018-07-08 16:31:05.645712108 +0300
+@@ -53,7 +53,7 @@
+ 	fprintf(out,
+ 		"usage:\t%s [-c <file>] [-ghlLv] [-o format] "
+ 		"[-s <tag>] [-t <token>]\n    [-w <file>] [dev ...]\n"
+-		"\t-c\tcache file (default: /etc/blkid.tab, /dev/null = none)\n"
++		"\t-c\tcache file (default: @TERMUX_PREFIX@/etc/blkid.tab, /dev/null = none)\n"
+ 		"\t-h\tprint this usage message and exit\n"
+ 		"\t-g\tgarbage collect the blkid cache\n"
+ 		"\t-s\tshow specified tag(s) (default show all tags)\n"

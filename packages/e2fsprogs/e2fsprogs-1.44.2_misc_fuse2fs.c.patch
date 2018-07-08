@@ -1,0 +1,12 @@
+diff -uNr e2fsprogs-1.44.2/misc/fuse2fs.c e2fsprogs-1.44.2.mod/misc/fuse2fs.c
+--- e2fsprogs-1.44.2/misc/fuse2fs.c	2018-05-16 02:42:44.000000000 +0300
++++ e2fsprogs-1.44.2.mod/misc/fuse2fs.c	2018-07-08 16:40:47.602563603 +0300
+@@ -52,7 +52,7 @@
+ #define NLS_CAT_NAME "e2fsprogs"
+ #endif
+ #ifndef LOCALEDIR
+-#define LOCALEDIR "/usr/share/locale"
++#define LOCALEDIR "@TERMUX_PREFIX@/share/locale"
+ #endif
+ #else
+ #define _(a) (a)
