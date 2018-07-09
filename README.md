@@ -65,6 +65,9 @@ sudo bash setup-build-environment.sh
 ![alt text](/screenshots/vnc_screen_anim.gif "TigerVNC + FluxBox")
 
 ## External links
+* https://thunix.org/~xeffyr/termux-repo/ - An archive of [termux.xeffyr.ml](https://termux.xeffyr.ml), you will be redirected to it if main server is under maintenance.
+
+Termux-related:
 * Termux home page: https://termux.com/
 * Termux Wiki: https://wiki.termux.com/wiki/Main_Page
 * Termux App: https://github.com/termux/termux-app
