@@ -72,3 +72,4 @@ Termux-related:
 * Termux Wiki: https://wiki.termux.com/wiki/Main_Page
 * Termux App: https://github.com/termux/termux-app
 * Termux Packages: https://github.com/termux/termux-packages
+* Termux on Repology: https://repology.org/repository/termux
