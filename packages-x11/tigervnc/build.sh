@@ -1,17 +1,16 @@
 TERMUX_PKG_MAINTAINER="Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr"
 
 TERMUX_PKG_HOMEPAGE=http://www.tigervnc.org/
-TERMUX_PKG_VERSION=1.8.0
-TERMUX_PKG_REVISION=8
+TERMUX_PKG_VERSION=1.9.0
 TERMUX_PKG_DESCRIPTION="Suite of VNC servers. Based on the VNC 4 branch of TightVNC."
 TERMUX_PKG_SRCURL=https://github.com/TigerVNC/tigervnc/archive/v${TERMUX_PKG_VERSION}.tar.gz
-TERMUX_PKG_SHA256=9951dab0e10f8de03996ec94bec0d938da9f36d48dca8c954e8bbc95c16338f8
+TERMUX_PKG_SHA256=f15ced8500ec56356c3bf271f52e58ed83729118361c7103eab64a618441f740
 
-TERMUX_PKG_DEPENDS="libandroid-shmem, libc++, libgcrypt, libgnutls, libjpeg-turbo, libpixman, libxdamage, libxfont2, libxshmfence, perl, xkeyboard-config, xorg-xauth, xorg-xvfb"
+TERMUX_PKG_DEPENDS="libandroid-shmem, libc++, fltk, libgcrypt, libgnutls, libjpeg-turbo, libpixman, libxdamage, libxfont2, libxshmfence, perl, xkeyboard-config, xorg-xauth, xorg-xvfb"
 TERMUX_PKG_BUILD_DEPENDS="xorgproto, xorg-font-util, xorg-util-macros, xtrans"
 
 TERMUX_PKG_FOLDERNAME=tigervnc-${TERMUX_PKG_VERSION}
-TERMUX_PKG_EXTRA_CONFIGURE_ARGS="-DBUILD_VIEWER=OFF -DENABLE_NLS=OFF -DENABLE_PAM=OFF -DENABLE_GNUTLS=ON"
+TERMUX_PKG_EXTRA_CONFIGURE_ARGS="-DBUILD_VIEWER=ON -DENABLE_NLS=OFF -DENABLE_PAM=OFF -DENABLE_GNUTLS=ON"
 TERMUX_PKG_BUILD_IN_SRC=true
 
 termux_step_pre_configure () {
