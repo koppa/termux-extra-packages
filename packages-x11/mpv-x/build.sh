@@ -2,9 +2,8 @@ TERMUX_PKG_MAINTAINER="Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr"
 
 TERMUX_PKG_HOMEPAGE=https://mpv.io/
 TERMUX_PKG_DESCRIPTION="Command-line media player"
-TERMUX_PKG_VERSION=0.28.2
-TERMUX_PKG_REVISION=1
-TERMUX_PKG_SHA256=aada14e025317b5b3e8e58ffaf7902e8b6e4ec347a93d25a7c10d3579426d795
+TERMUX_PKG_VERSION=0.29.0
+TERMUX_PKG_SHA256=772af878cee5495dcd342788a6d120b90c5b1e677e225c7198f1e76506427319
 TERMUX_PKG_SRCURL=https://github.com/mpv-player/mpv/archive/v${TERMUX_PKG_VERSION}.tar.gz
 
 TERMUX_PKG_DEPENDS="ffmpeg, openal-soft, libandroid-glob, libandroid-shmem, littlecms, libjpeg-turbo, libcaca, libx11, libxext, libxinerama, libxss, libxrandr"
