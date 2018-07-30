@@ -1,6 +1,7 @@
 TERMUX_PKG_MAINTAINER="Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr"
 
 TERMUX_PKG_HOMEPAGE=https://chromium.googlesource.com/webm/libwebp
+TERMUX_PKG_DESCRIPTION="WebP library and conversion tools"
 TERMUX_PKG_VERSION=1.0.0
 TERMUX_PKG_SRCURL=https://github.com/webmproject/libwebp/archive/v$TERMUX_PKG_VERSION.tar.gz
 TERMUX_PKG_SHA256=c5c5ebf979543ac1f3348df8f6245262abd787a147b9632c880d92bfc38dbbeb
