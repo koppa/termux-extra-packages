@@ -16,6 +16,11 @@ To use X11-enabled packages, you need to install [VNC Viewer](https://play.googl
 pkg install dirmngr
 apt-key adv --keyserver pool.sks-keyservers.net --recv 9D6D488416B493F0
 ```
+If you have a trouble with accessing key server, you can manually download public key and add it:
+```
+curl -LO https://raw.githubusercontent.com/xeffyr/termux-extra-packages/master/pubkey.asc
+apt-key add pubkey.asc
+```
 
 2. Add these lines to your sources.list file:
 ```
