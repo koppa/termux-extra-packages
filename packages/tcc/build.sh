@@ -3,6 +3,7 @@ TERMUX_PKG_MAINTAINER="Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr"
 TERMUX_PKG_HOMEPAGE=https://bellard.org/tcc/
 TERMUX_PKG_DESCRIPTION="Tiny C Compiler"
 TERMUX_PKG_VERSION=0.9.27
+TERMUX_PKG_REVISION=1
 TERMUX_PKG_SRCURL=http://download.savannah.gnu.org/releases/tinycc/tcc-${TERMUX_PKG_VERSION}.tar.bz2
 TERMUX_PKG_SHA256=de23af78fca90ce32dff2dd45b3432b2334740bb9bb7b05bf60fdbfc396ceb9c
 TERMUX_PKG_BUILD_IN_SRC=true
@@ -35,7 +36,6 @@ termux_step_make() {
                 --cc="clang" \
                 --cpu="${TERMUX_ARCH}" \
                 --disable-rpath \
-                --with-selinux \
                 --elfinterp="${ELF_INTERPRETER_PATH}" \
                 --crtprefix="${TERMUX_PREFIX}/lib/tcc/crt" \
                 --sysincludepaths="${TERMUX_PREFIX}/include:${TERMUX_PREFIX}/lib/tcc/include" \
