@@ -2,10 +2,9 @@ TERMUX_PKG_MAINTAINER="Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr"
 
 TERMUX_PKG_HOMEPAGE=https://restic.net/
 TERMUX_PKG_DESCRIPTION="restic is a program that does backups right."
-TERMUX_PKG_VERSION=0.9.1
-TERMUX_PKG_REVISION=2
+TERMUX_PKG_VERSION=0.9.2
 TERMUX_PKG_SRCURL=https://github.com/restic/restic/archive/v${TERMUX_PKG_VERSION}.tar.gz
-TERMUX_PKG_SHA256=359d3b8e555a9952f2b98c81ee3dbec8dc441e12789c436ca564762aaacec095
+TERMUX_PKG_SHA256=8f8eee3e9651b9f7384a323ba3c26a5667a6388ab2ef8e6d869d3cd69b9f7c95
 TERMUX_PKG_RECOMMENDS="dropbear | openssh, rclone, restic-server"
 TERMUX_PKG_BUILD_IN_SRC=true
 
