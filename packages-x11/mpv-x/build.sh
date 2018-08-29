@@ -3,7 +3,7 @@ TERMUX_PKG_MAINTAINER="Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr"
 TERMUX_PKG_HOMEPAGE=https://mpv.io/
 TERMUX_PKG_DESCRIPTION="Command-line media player"
 TERMUX_PKG_VERSION=0.29.0
-TERMUX_PKG_REVISION=1
+TERMUX_PKG_REVISION=2
 TERMUX_PKG_SHA256=772af878cee5495dcd342788a6d120b90c5b1e677e225c7198f1e76506427319
 TERMUX_PKG_SRCURL=https://github.com/mpv-player/mpv/archive/v${TERMUX_PKG_VERSION}.tar.gz
 
@@ -70,15 +70,4 @@ termux_step_make_install () {
 	echo "LD_LIBRARY_PATH=/system/$SYSTEM_LIBFOLDER:/system/vendor/$SYSTEM_LIBFOLDER:$TERMUX_PREFIX/lib $TERMUX_PREFIX/libexec/mpv \"\$@\"" >> $TERMUX_PREFIX/bin/mpv
 
 	chmod +x $TERMUX_PREFIX/bin/mpv
-}
-
-termux_step_create_debscripts() {
-	## POST INSTALL:
-	{
-		echo "#!${TERMUX_PREFIX}/bin/sh"
-		echo "echo"
-		echo "echo \"WARNING: MPV (with x11) may not work on some devices.\""
-		echo "echo"
-		echo "exit 0"
-	} > postinst
 }
