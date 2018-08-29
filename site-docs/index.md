@@ -1,21 +1,43 @@
-% Termux APT repositories
+% Termux extra packages
+
+There are located packages which are not added into the [main](https://termux.net) repository. In this repository you can find OpenJDK, QEMU, graphical (x11) programs, etc...
 
 ***
 
-There are located APT repositories for Termux, an enhanced terminal emulator and Linux environment for Android. To learn more about it, check it's [Home page](https://termux.com), [Wiki](https://wiki.termux.com) and [Github profile](https://github.com/termux).
-
-#### Disclamier
+### Disclamier
 
 This is a third-party service, use it on your own risk. The provided services and content may be changed or removed without warning.
 
-#### What is available here
+***
 
- * [Termux Mirror](mirror.html) - an archive of [termux.net](https://termux.net), the main Termux repository
- * [Extra Packages](extra.html) - extra packages like OpenJDK, QEMU, X11/gui stuff, etc...
+### How to enable this repository
 
-#### If you found an issue
+1. You may need to install a package `dirmngr` before adding a GPG key. In Termux it is recommended to use a wrapper script called `pkg` for executing APT package manager, so it will be used in examples.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ {#snippet-01 .bash .numberLines startFrom="1"}
+pkg install dirmngr
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can post issues on project's page on Github ([xeffyr/termux-extra-packages/issues](https://github.com/xeffyr/termux-extra-packages/issues)). Before posting, please, make sure that issue is not a duplicate and related only to stuff available here.
+2. Add GPG key to the APT's keyring. Note that this command may sometimes fail (especially if Internet connection is bad).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ {#snippet-02 .bash .numberLines startFrom="1"}
+apt-key adv --keyserver pool.sks-keyservers.net --recv 9D6D488416B493F0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+3. Add these lines to *sources.list* file. This file is located in '*${PREFIX}/etc/apt*'.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ {#snippet-03 .numberLines startFrom="1"}
+# Extra packages by Xeffyr
+deb https://termux.xeffyr.ml/ extra main x11
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+4. Update local APT's database of packages. This step is not necessary, but you may do it to verify that everything is okay.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ {#snippet-04 .bash .numberLines startFrom="1"}
+pkg update
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+***
+
+### Source code for these packages
+
+You can get *sources* on project's Github page ([xeffyr/termux-extra-packages](https://github.com/xeffyr/termux-extra-packages)). Note that tarballs are not stored, only build environment and patches.
 
 ***
 
