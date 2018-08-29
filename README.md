@@ -71,7 +71,7 @@ sudo bash setup-build-environment.sh
 
 ## External links
 * https://thunix.org/~xeffyr/termux-repo/ - An archive of [termux.xeffyr.ml](https://termux.xeffyr.ml), you will be redirected to it if main server is under maintenance.
-* https://ipfs.io/ipns/QmaLoyXS5wsmmvyVWSX5EdZaagDVjYPfD5HwETo7SwyZ4g/ - Access via IPFS. Under testing.
+* https://ipfs.io/ipns/termux.xeffyr.ml/ - Access via IPFS.
 
 Termux-related:
 * Termux home page: https://termux.com/
