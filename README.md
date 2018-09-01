@@ -10,7 +10,7 @@ Here are located build scripts and patches for packages which haven't been added
 
 To use X11-enabled packages, you need to install [VNC Viewer](https://play.google.com/store/apps/details?id=com.realvnc.viewer.android) or [XServer XSDL](https://play.google.com/store/apps/details?id=x.org.server). If launching program from terminal, make sure that environment variable 'DISPLAY' is set to correct value, e.g. `export DISPLAY=:1` when using TigerVNC or `export DISPLAY=127.0.0.1:0` when XServer XSDL.
 
-**Note:** This repository is hosted over IPFS. Since public IPFS nodes may be blocked in countries with censorship, some users may don't have access to `https://termux.xeffyr.ml/` and `https://ipfs.io/ipns/termux.xeffyr.ml/`. In this case it is suggested to try this URL: `https://thunix.org/~xeffyr/termux-repo/`.
+**Note:** This repository is hosted over IPFS. Since public IPFS nodes may be blocked in countries with censorship, some users may don't have access to `https://xeffyr.ml/termux` and `https://ipfs.io/ipns/xeffyr.ml/termux`. In this case it is suggested to try this URL: `https://thunix.org/~xeffyr/termux-repo/`.
 
 ## How to enable Extra Packages in Termux
 1. You need to add PGP key to the APT's keyring:
@@ -27,7 +27,7 @@ apt-key add pubkey.asc
 2. Add these lines to your sources.list file:
 ```
 # Xeffyr's Extra packages
-deb https://termux.xeffyr.ml/ extra main x11
+deb https://xeffyr.ml/termux extra main x11
 ```
 
 3. Update local APT's database of packages:
