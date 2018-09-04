@@ -1,0 +1,14 @@
+diff -uNr minetest-0.4.17.1/src/itemdef.cpp minetest-0.4.17.1.mod/src/itemdef.cpp
+--- minetest-0.4.17.1/src/itemdef.cpp	2018-06-10 18:18:11.000000000 +0300
++++ minetest-0.4.17.1.mod/src/itemdef.cpp	2018-09-04 15:42:26.140154371 +0300
+@@ -38,10 +38,6 @@
+ #include <map>
+ #include <set>
+ 
+-#ifdef __ANDROID__
+-#include <GLES/gl.h>
+-#endif
+-
+ /*
+ 	ItemDefinition
+ */

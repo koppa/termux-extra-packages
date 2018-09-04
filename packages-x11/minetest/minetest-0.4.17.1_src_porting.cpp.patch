@@ -1,0 +1,62 @@
+diff -uNr minetest-0.4.17.1/src/porting.cpp minetest-0.4.17.1.mod/src/porting.cpp
+--- minetest-0.4.17.1/src/porting.cpp	2018-06-10 18:18:11.000000000 +0300
++++ minetest-0.4.17.1.mod/src/porting.cpp	2018-09-04 15:42:26.146821069 +0300
+@@ -43,7 +43,7 @@
+ 	#include <sys/pstat.h>
+ #endif
+ #if !defined(_WIN32) && !defined(__APPLE__) && \
+-	!defined(__ANDROID__) && !defined(SERVER)
++	!defined(SERVER)
+ 	#define XORG_USED
+ #endif
+ #ifdef XORG_USED
+@@ -391,11 +391,7 @@
+ 	char buf[BUFSIZ];
+ 
+ 	if (!getCurrentExecPath(buf, sizeof(buf))) {
+-#ifdef __ANDROID__
+-		errorstream << "Unable to read bindir "<< std::endl;
+-#else
+ 		FATAL_ERROR("Unable to read bindir");
+-#endif
+ 		return false;
+ 	}
+ 
+@@ -413,10 +409,6 @@
+ 		DIR_DELIM + PROJECT_NAME);
+ 	trylist.push_back(bindir + DIR_DELIM "..");
+ 
+-#ifdef __ANDROID__
+-	trylist.push_back(path_user);
+-#endif
+-
+ 	for (std::list<std::string>::const_iterator
+ 			i = trylist.begin(); i != trylist.end(); ++i) {
+ 		const std::string &trypath = *i;
+@@ -437,10 +429,8 @@
+ 		break;
+ 	}
+ 
+-#ifndef __ANDROID__
+ 	path_user = std::string(getenv("HOME")) + DIR_DELIM "."
+ 		+ PROJECT_NAME;
+-#endif
+ 
+ 	return true;
+ }
+@@ -845,7 +835,6 @@
+ 	return driver_names[type];
+ }
+ 
+-#	ifndef __ANDROID__
+ #		ifdef XORG_USED
+ 
+ static float calcDisplayDensity()
+@@ -896,7 +885,6 @@
+ 
+ 	return deskres;
+ }
+-#	endif // __ANDROID__
+ #endif // SERVER
+ 
+ 

@@ -1,0 +1,13 @@
+diff -uNr minetest-0.4.17.1/src/mainmenumanager.h minetest-0.4.17.1.mod/src/mainmenumanager.h
+--- minetest-0.4.17.1/src/mainmenumanager.h	2018-06-10 18:18:11.000000000 +0300
++++ minetest-0.4.17.1.mod/src/mainmenumanager.h	2018-09-04 15:42:26.140154371 +0300
+@@ -138,9 +138,7 @@
+ 	virtual void exitToOS()
+ 	{
+ 		shutdown_requested = true;
+-#ifndef __ANDROID__
+ 		device->closeDevice();
+-#endif
+ 	}
+ 
+ 	virtual void disconnect()

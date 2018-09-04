@@ -1,0 +1,50 @@
+diff -uNr minetest-0.4.17.1/src/defaultsettings.cpp minetest-0.4.17.1.mod/src/defaultsettings.cpp
+--- minetest-0.4.17.1/src/defaultsettings.cpp	2018-06-10 18:18:11.000000000 +0300
++++ minetest-0.4.17.1.mod/src/defaultsettings.cpp	2018-09-04 15:42:26.126820973 +0300
+@@ -361,46 +361,7 @@
+ 	settings->setDefault("high_precision_fpu", "true");
+ 	settings->setDefault("enable_console", "false");
+ 
+-#ifdef __ANDROID__
+-	settings->setDefault("screenW", "0");
+-	settings->setDefault("screenH", "0");
+-	settings->setDefault("enable_shaders", "false");
+-	settings->setDefault("fullscreen", "true");
+-	settings->setDefault("video_driver", "ogles1");
+-	settings->setDefault("touchtarget", "true");
+-	settings->setDefault("TMPFolder","/sdcard/" PROJECT_NAME_C "/tmp/");
+-	settings->setDefault("touchscreen_threshold","20");
+-	settings->setDefault("smooth_lighting", "false");
+-	settings->setDefault("max_simultaneous_block_sends_per_client", "3");
+-	settings->setDefault("emergequeue_limit_diskonly", "8");
+-	settings->setDefault("emergequeue_limit_generate", "8");
+-	settings->setDefault("max_block_generate_distance", "3");
+-	settings->setDefault("enable_3d_clouds", "false");
+-	settings->setDefault("fps_max", "30");
+-	settings->setDefault("pause_fps_max", "10");
+-	settings->setDefault("max_objects_per_block", "20");
+-	settings->setDefault("sqlite_synchronous", "1");
+-	settings->setDefault("gui_scaling", "1.1");
+-	settings->setDefault("server_map_save_interval", "15");
+-	settings->setDefault("client_mapblock_limit", "500");
+-	settings->setDefault("active_block_range", "1");
+-	settings->setDefault("chunksize", "3");
+-
+-	settings->setDefault("viewing_range", "25");
+-	settings->setDefault("inventory_image_hack", "false");
+-
+-	// Check for a device with a small screen
+-	float x_inches = ((double) porting::getDisplaySize().X /
+-			(160 * porting::getDisplayDensity()));
+-	if (x_inches  < 3.5) {
+-		settings->setDefault("hud_scaling", "0.6");
+-	} else if (x_inches < 4.5) {
+-		settings->setDefault("hud_scaling", "0.7");
+-	}
+-	settings->setDefault("curl_verify_cert","false");
+-#else
+ 	settings->setDefault("screen_dpi", "72");
+-#endif
+ }
+ 
+ void override_default_settings(Settings *settings, Settings *from)

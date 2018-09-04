@@ -1,0 +1,42 @@
+diff -uNr minetest-0.4.17.1/src/guiEngine.cpp minetest-0.4.17.1.mod/src/guiEngine.cpp
+--- minetest-0.4.17.1/src/guiEngine.cpp	2018-06-10 18:18:11.000000000 +0300
++++ minetest-0.4.17.1.mod/src/guiEngine.cpp	2018-09-04 15:42:26.133487672 +0300
+@@ -39,12 +39,6 @@
+ #include "guiscalingfilter.h"
+ #include "irrlicht_changes/static_text.h"
+ 
+-#ifdef __ANDROID__
+-#include "client/tile.h"
+-#include <GLES/gl.h>
+-#endif
+-
+-
+ /******************************************************************************/
+ /** TextDestGuiEngine                                                         */
+ /******************************************************************************/
+@@ -93,15 +87,6 @@
+ 		return NULL;
+ 	m_to_delete.insert(name);
+ 
+-#ifdef __ANDROID__
+-	video::IImage *image = m_driver->createImageFromFile(name.c_str());
+-	if (image) {
+-		image = Align2Npot2(image, m_driver);
+-		video::ITexture* retval = m_driver->addTexture(name.c_str(), image);
+-		image->drop();
+-		return retval;
+-	}
+-#endif
+ 	return m_driver->getTexture(name.c_str());
+ }
+ 
+@@ -310,9 +295,6 @@
+ 
+ 		m_script->step();
+ 
+-#ifdef __ANDROID__
+-		m_menu->getAndroidUIInput();
+-#endif
+ 	}
+ }
+ 

@@ -1,0 +1,28 @@
+diff -uNr minetest-0.4.17.1/src/CMakeLists.txt minetest-0.4.17.1.mod/src/CMakeLists.txt
+--- minetest-0.4.17.1/src/CMakeLists.txt	2018-06-10 18:18:11.000000000 +0300
++++ minetest-0.4.17.1.mod/src/CMakeLists.txt	2018-09-04 15:53:58.047710640 +0300
+@@ -315,14 +315,9 @@
+ 		endif(APPLE)
+ 	endif(BUILD_CLIENT)
+ 	find_package(ZLIB REQUIRED)
+-	set(PLATFORM_LIBS -lpthread ${CMAKE_DL_LIBS})
++	set(PLATFORM_LIBS ${CMAKE_DL_LIBS})
+ 	if(APPLE)
+ 		set(PLATFORM_LIBS "-framework CoreFoundation" ${PLATFORM_LIBS})
+-	else()
+-		check_library_exists(rt clock_gettime "" HAVE_LIBRT)
+-		if (HAVE_LIBRT)
+-			set(PLATFORM_LIBS -lrt ${PLATFORM_LIBS})
+-		endif(HAVE_LIBRT)
+ 	endif(APPLE)
+ 
+ 	if(NOT APPLE)
+@@ -584,7 +579,7 @@
+ 		${OPENGL_LIBRARIES}
+ 		${JPEG_LIBRARIES}
+ 		${BZIP2_LIBRARIES}
+-		${PNG_LIBRARIES}
++		-lpng
+ 		${X11_LIBRARIES}
+ 		${GETTEXT_LIBRARY}
+ 		${SOUND_LIBRARIES}

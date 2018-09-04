@@ -1,0 +1,25 @@
+diff -uNr minetest-0.4.17.1/src/client/clientlauncher.cpp minetest-0.4.17.1.mod/src/client/clientlauncher.cpp
+--- minetest-0.4.17.1/src/client/clientlauncher.cpp	2018-06-10 18:18:11.000000000 +0300
++++ minetest-0.4.17.1.mod/src/client/clientlauncher.cpp	2018-09-04 15:42:26.120154275 +0300
+@@ -507,9 +507,7 @@
+ 	infostream << "Waited for other menus" << std::endl;
+ 
+ 	// Cursor can be non-visible when coming from the game
+-#ifndef ANDROID
+ 	device->getCursorControl()->setVisible(true);
+-#endif
+ 
+ 	/* show main menu */
+ 	GUIEngine mymenu(device, &input->joystick, guiroot,
+@@ -563,11 +561,6 @@
+ 	params.EventReceiver = receiver;
+ 	params.HighPrecisionFPU = g_settings->getBool("high_precision_fpu");
+ 	params.ZBufferBits   = 24;
+-#ifdef __ANDROID__
+-	params.PrivateData = porting::app_global;
+-	params.OGLES2ShaderPath = std::string(porting::path_user + DIR_DELIM +
+-			"media" + DIR_DELIM + "Shaders" + DIR_DELIM).c_str();
+-#endif
+ 
+ 	device = createDeviceEx(params);
+ 

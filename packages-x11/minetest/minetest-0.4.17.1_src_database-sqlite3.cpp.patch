@@ -1,0 +1,35 @@
+diff -uNr minetest-0.4.17.1/src/database-sqlite3.cpp minetest-0.4.17.1.mod/src/database-sqlite3.cpp
+--- minetest-0.4.17.1/src/database-sqlite3.cpp	2018-06-10 18:18:11.000000000 +0300
++++ minetest-0.4.17.1.mod/src/database-sqlite3.cpp	2018-09-04 15:42:26.126820973 +0300
+@@ -237,11 +237,7 @@
+ void MapDatabaseSQLite3::initStatements()
+ {
+ 	PREPARE_STATEMENT(read, "SELECT `data` FROM `blocks` WHERE `pos` = ? LIMIT 1");
+-#ifdef __ANDROID__
+-	PREPARE_STATEMENT(write,  "INSERT INTO `blocks` (`pos`, `data`) VALUES (?, ?)");
+-#else
+ 	PREPARE_STATEMENT(write, "REPLACE INTO `blocks` (`pos`, `data`) VALUES (?, ?)");
+-#endif
+ 	PREPARE_STATEMENT(delete, "DELETE FROM `blocks` WHERE `pos` = ?");
+ 	PREPARE_STATEMENT(list, "SELECT `pos` FROM `blocks`");
+ 
+@@ -274,19 +270,6 @@
+ {
+ 	verifyDatabase();
+ 
+-#ifdef __ANDROID__
+-	/**
+-	 * Note: For some unknown reason SQLite3 fails to REPLACE blocks on Android,
+-	 * deleting them and then inserting works.
+-	 */
+-	bindPos(m_stmt_read, pos);
+-
+-	if (sqlite3_step(m_stmt_read) == SQLITE_ROW) {
+-		deleteBlock(pos);
+-	}
+-	sqlite3_reset(m_stmt_read);
+-#endif
+-
+ 	bindPos(m_stmt_write, pos);
+ 	SQLOK(sqlite3_bind_blob(m_stmt_write, 2, data.data(), data.size(), NULL),
+ 		"Internal error: failed to bind query at " __FILE__ ":" TOSTRING(__LINE__));
