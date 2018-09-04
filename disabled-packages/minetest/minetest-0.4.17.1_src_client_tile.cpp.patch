@@ -1,6 +1,6 @@
 diff -uNr minetest-0.4.17.1/src/client/tile.cpp minetest-0.4.17.1.mod/src/client/tile.cpp
 --- minetest-0.4.17.1/src/client/tile.cpp	2018-06-10 18:18:11.000000000 +0300
-+++ minetest-0.4.17.1.mod/src/client/tile.cpp	2018-09-04 15:42:26.123487624 +0300
++++ minetest-0.4.17.1.mod/src/client/tile.cpp	2018-09-04 17:29:10.264144670 +0300
 @@ -38,10 +38,6 @@
  #include "nodedef.h"
  

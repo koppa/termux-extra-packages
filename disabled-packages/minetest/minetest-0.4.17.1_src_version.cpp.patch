@@ -1,6 +1,6 @@
 diff -uNr minetest-0.4.17.1/src/version.cpp minetest-0.4.17.1.mod/src/version.cpp
 --- minetest-0.4.17.1/src/version.cpp	2018-06-10 18:18:11.000000000 +0300
-+++ minetest-0.4.17.1.mod/src/version.cpp	2018-09-04 15:42:26.150154419 +0300
++++ minetest-0.4.17.1.mod/src/version.cpp	2018-09-04 17:29:10.274144719 +0300
 @@ -20,10 +20,7 @@
  #include "version.h"
  #include "config.h"

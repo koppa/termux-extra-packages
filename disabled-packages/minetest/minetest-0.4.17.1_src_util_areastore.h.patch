@@ -1,0 +1,14 @@
+diff -uNr minetest-0.4.17.1/src/util/areastore.h minetest-0.4.17.1.mod/src/util/areastore.h
+--- minetest-0.4.17.1/src/util/areastore.h	2018-06-10 18:18:11.000000000 +0300
++++ minetest-0.4.17.1.mod/src/util/areastore.h	2018-09-04 17:31:55.668529211 +0300
+@@ -28,9 +28,7 @@
+ #include <istream>
+ #include "util/container.h"
+ #include "util/numeric.h"
+-#ifndef ANDROID
+-	#include "cmake_config.h"
+-#endif
++#include "cmake_config.h"
+ #if USE_SPATIAL
+ 	#include <spatialindex/SpatialIndex.h>
+ 	#include "util/serialize.h"

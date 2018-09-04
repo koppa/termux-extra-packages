@@ -1,6 +1,6 @@
 diff -uNr minetest-0.4.17.1/src/filesys.cpp minetest-0.4.17.1.mod/src/filesys.cpp
 --- minetest-0.4.17.1/src/filesys.cpp	2018-06-10 18:18:11.000000000 +0300
-+++ minetest-0.4.17.1.mod/src/filesys.cpp	2018-09-04 15:42:26.130154323 +0300
++++ minetest-0.4.17.1.mod/src/filesys.cpp	2018-09-04 17:29:10.267478019 +0300
 @@ -373,11 +373,7 @@
  		compatible with lua's os.tmpname which under the default
  		configuration hardcodes mkstemp("/tmp/lua_XXXXXX").

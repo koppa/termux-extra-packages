@@ -1,6 +1,6 @@
 diff -uNr minetest-0.4.17.1/src/client/tile.h minetest-0.4.17.1.mod/src/client/tile.h
 --- minetest-0.4.17.1/src/client/tile.h	2018-06-10 18:18:11.000000000 +0300
-+++ minetest-0.4.17.1.mod/src/client/tile.h	2018-09-04 15:42:26.126820973 +0300
++++ minetest-0.4.17.1.mod/src/client/tile.h	2018-09-04 17:29:10.264144670 +0300
 @@ -149,10 +149,6 @@
  
  IWritableTextureSource* createTextureSource(IrrlichtDevice *device);

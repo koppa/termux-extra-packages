@@ -1,6 +1,6 @@
 diff -uNr minetest-0.4.17.1/src/drawscene.cpp minetest-0.4.17.1.mod/src/drawscene.cpp
 --- minetest-0.4.17.1/src/drawscene.cpp	2018-06-10 18:18:11.000000000 +0300
-+++ minetest-0.4.17.1.mod/src/drawscene.cpp	2018-09-04 15:42:26.130154323 +0300
++++ minetest-0.4.17.1.mod/src/drawscene.cpp	2018-09-04 17:29:10.267478019 +0300
 @@ -630,16 +630,9 @@
  		video::ITexture *progress_img_bg = tsrc->getTexture("progress_bar_bg.png");
  

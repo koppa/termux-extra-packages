@@ -1,6 +1,6 @@
 diff -uNr minetest-0.4.17.1/src/database-sqlite3.cpp minetest-0.4.17.1.mod/src/database-sqlite3.cpp
 --- minetest-0.4.17.1/src/database-sqlite3.cpp	2018-06-10 18:18:11.000000000 +0300
-+++ minetest-0.4.17.1.mod/src/database-sqlite3.cpp	2018-09-04 15:42:26.126820973 +0300
++++ minetest-0.4.17.1.mod/src/database-sqlite3.cpp	2018-09-04 17:29:10.267478019 +0300
 @@ -237,11 +237,7 @@
  void MapDatabaseSQLite3::initStatements()
  {

@@ -1,6 +1,6 @@
 diff -uNr minetest-0.4.17.1/src/log.cpp minetest-0.4.17.1.mod/src/log.cpp
 --- minetest-0.4.17.1/src/log.cpp	2018-06-10 18:18:11.000000000 +0300
-+++ minetest-0.4.17.1.mod/src/log.cpp	2018-09-04 15:42:26.140154371 +0300
++++ minetest-0.4.17.1.mod/src/log.cpp	2018-09-04 17:29:10.270811370 +0300
 @@ -114,43 +114,6 @@
  std::ostream infostream(&info_buf);
  std::ostream verbosestream(&verbose_buf);

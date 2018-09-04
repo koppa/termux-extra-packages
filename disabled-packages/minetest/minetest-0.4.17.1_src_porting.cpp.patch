@@ -1,6 +1,6 @@
 diff -uNr minetest-0.4.17.1/src/porting.cpp minetest-0.4.17.1.mod/src/porting.cpp
 --- minetest-0.4.17.1/src/porting.cpp	2018-06-10 18:18:11.000000000 +0300
-+++ minetest-0.4.17.1.mod/src/porting.cpp	2018-09-04 15:42:26.146821069 +0300
++++ minetest-0.4.17.1.mod/src/porting.cpp	2018-09-04 17:29:10.270811370 +0300
 @@ -43,7 +43,7 @@
  	#include <sys/pstat.h>
  #endif

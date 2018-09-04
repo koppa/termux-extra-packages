@@ -1,6 +1,6 @@
 diff -uNr minetest-0.4.17.1/src/guiEngine.cpp minetest-0.4.17.1.mod/src/guiEngine.cpp
 --- minetest-0.4.17.1/src/guiEngine.cpp	2018-06-10 18:18:11.000000000 +0300
-+++ minetest-0.4.17.1.mod/src/guiEngine.cpp	2018-09-04 15:42:26.133487672 +0300
++++ minetest-0.4.17.1.mod/src/guiEngine.cpp	2018-09-04 17:29:10.267478019 +0300
 @@ -39,12 +39,6 @@
  #include "guiscalingfilter.h"
  #include "irrlicht_changes/static_text.h"

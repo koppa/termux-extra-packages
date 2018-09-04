@@ -1,6 +1,6 @@
 diff -uNr minetest-0.4.17.1/src/guiFormSpecMenu.cpp minetest-0.4.17.1.mod/src/guiFormSpecMenu.cpp
 --- minetest-0.4.17.1/src/guiFormSpecMenu.cpp	2018-06-10 18:18:11.000000000 +0300
-+++ minetest-0.4.17.1.mod/src/guiFormSpecMenu.cpp	2018-09-04 15:43:22.037090189 +0300
++++ minetest-0.4.17.1.mod/src/guiFormSpecMenu.cpp	2018-09-04 17:29:10.270811370 +0300
 @@ -106,9 +106,6 @@
  	current_field_enter_pending(""),
  	m_font(NULL),

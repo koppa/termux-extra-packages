@@ -1,6 +1,6 @@
 diff -uNr minetest-0.4.17.1/src/CMakeLists.txt minetest-0.4.17.1.mod/src/CMakeLists.txt
 --- minetest-0.4.17.1/src/CMakeLists.txt	2018-06-10 18:18:11.000000000 +0300
-+++ minetest-0.4.17.1.mod/src/CMakeLists.txt	2018-09-04 15:53:58.047710640 +0300
++++ minetest-0.4.17.1.mod/src/CMakeLists.txt	2018-09-04 17:29:10.264144670 +0300
 @@ -315,14 +315,9 @@
  		endif(APPLE)
  	endif(BUILD_CLIENT)

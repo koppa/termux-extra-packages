@@ -1,6 +1,6 @@
 diff -uNr minetest-0.4.17.1/src/defaultsettings.cpp minetest-0.4.17.1.mod/src/defaultsettings.cpp
 --- minetest-0.4.17.1/src/defaultsettings.cpp	2018-06-10 18:18:11.000000000 +0300
-+++ minetest-0.4.17.1.mod/src/defaultsettings.cpp	2018-09-04 15:42:26.126820973 +0300
++++ minetest-0.4.17.1.mod/src/defaultsettings.cpp	2018-09-04 17:29:10.267478019 +0300
 @@ -361,46 +361,7 @@
  	settings->setDefault("high_precision_fpu", "true");
  	settings->setDefault("enable_console", "false");
