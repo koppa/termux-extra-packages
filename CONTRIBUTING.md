@@ -27,10 +27,11 @@ need to know that certain types of packages are not accepted.
 * Proprietary or closed-source projects
 * Hacking tools and other kinds of malware
 * Packages, that work only on certain architectures
-* Packages, that are part of large desktop environments
 * Packages, that require a custom Linux kernel
 * Packages, that require GNU C library
 * Packages, that can be compiled only with GCC
+
+Requests for X11 packages should be opened in https://github.com/termux/x11-packages.
 
 ## Submitting pull requests
 
