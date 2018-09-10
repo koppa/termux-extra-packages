@@ -39,7 +39,7 @@ Before submitting a pull request, ensure that it does NOT break anything.
 ### Submitting a new package
 
 Ensure that conditions specified in [Package requests](#package-requests) are met. To view samples of build (`build.sh`) scripts, it
-is recommended to check directories [/packages](/packages) and [/packages-x11](/packages-x11).
+is recommended to check directory [/packages](/packages).
 
 Script `build.sh` shouldn't use commands like `su`, `sudo`, `apt` or modify something outside of build environment. Binaries
 should be compiled from source code: never reuse binaries provided by various GNU/Linux distributions even if they are

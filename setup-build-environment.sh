@@ -13,17 +13,8 @@ fi
 
 PACKAGES=""
 
-## for adwaita-icon-theme
-PACKAGES="${PACKAGES} gnome-common gtk-3-examples libgtk-3-bin"
-
-## for libgtk2, libgtk3
-PACKAGES="${PACKAGES} gtk-doc-tools libgdk-pixbuf2.0-dev"
-
 ## for python-based packages (e.g. python2-xlib)
 PACKAGES="${PACKAGES} python-pip python3-pip"
-
-## for 'xorg-fonts-75dpi', 'xorg-fonts-100dpi'
-PACKAGES="${PACKAGES} xfonts-utils"
 
 ## for openjdk-9-jre-headless
 PACKAGES="${PACKAGES} zip"

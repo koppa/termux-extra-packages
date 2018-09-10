@@ -1,9 +1,0 @@
-diff -uNr dmenu-4.8.mod/dmenu_path dmenu-4.8.mod2/dmenu_path
---- dmenu-4.8.mod/dmenu_path	2018-03-14 21:26:40.000000000 +0200
-+++ dmenu-4.8.mod2/dmenu_path	2018-04-11 11:56:49.255886190 +0300
-@@ -1,4 +1,4 @@
--#!/bin/sh
-+#!@TERMUX_PREFIX@/bin/sh
- cachedir=${XDG_CACHE_HOME:-"$HOME/.cache"}
- if [ -d "$cachedir" ]; then
- 	cache=$cachedir/dmenu_run
