@@ -25,7 +25,7 @@ apt-key adv --keyserver pool.sks-keyservers.net --recv 9D6D488416B493F0
 3. Add these lines to *sources.list* file. This file is located in '*${PREFIX}/etc/apt*'.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ {#snippet-03 .numberLines startFrom="1"}
 # Extra packages by Xeffyr
-deb https://xeffyr.ml/termux/ extra main
+deb https://termux.xeffyr.ml extra main
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 4. Update local APT's database of packages. This step is not necessary, but you may do it to verify that everything is okay.
