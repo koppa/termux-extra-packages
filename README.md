@@ -2,8 +2,6 @@
 
 Here are located build scripts and patches for packages which haven't been added to the official Termux repositories. If you are searching for X11 packages, you probably want to look here: https://github.com/termux/x11-packages.
 
-If you need OpenJDK (headless), check this: https://github.com/xeffyr/termux-extra-packages/releases/tag/11.09.2018.
-
 ## How to enable Extra Packages in Termux
 1. You need to add PGP key to the APT's keyring:
 ```
