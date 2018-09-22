@@ -2,6 +2,8 @@
 
 Here are located build scripts and patches for packages which haven't been added to the official Termux repositories. If you are searching for X11 packages, you probably want to look here: https://github.com/termux/x11-packages.
 
+**Important note**: as my priority is support of [Termux X11 packages](https://github.com/termux/x11-packages), it is likely that this (extra-packages) repository will rarely receive updates and no new packages. It is also possible that some packages will be moved to [termux/termux-packages](https://github.com/termux/termux-packages).
+
 ## How to enable Extra Packages in Termux
 1. You need to add PGP key to the APT's keyring:
 ```
