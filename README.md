@@ -12,7 +12,7 @@ apt-key adv --keyserver pool.sks-keyservers.net --recv 9D6D488416B493F0
 2. Add these lines to your sources.list file:
 ```
 # Extra packages
-deb https://xeffyr.ml/termux extra main
+deb https://termux.xeffyr.ml extra main
 ```
 
 3. Update local APT's database of packages:
