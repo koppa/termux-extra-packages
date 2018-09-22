@@ -1,6 +1,7 @@
 % Termux extra packages
 
-There are located packages which are not added into the official [Termux](https://termux.com) repositories.
+There are located packages which are not added into the official [Termux](https://termux.com) repositories.<br>
+If you are seeking for [X11 packages](https://github.com/termux/x11-packages), you should look at [https://termux-11.ml](https://termux-x11.ml).
 
 ***
 
