@@ -1,0 +1,416 @@
+Package: cpulimit
+Architecture: i686
+Version: 0.2
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 20
+Filename: dists/extra/main/binary-i686/cpulimit_0.2_i686.deb
+Size: 7384
+MD5sum: 172243aef9cb81b0be3647435f2a705e
+SHA1: 5565b95044c212374534099d6c58d116bef79df3
+SHA256: 6961185aa49ab4382534d935f9b25ac1fcacbeda1912f34f416f1785962d74c8
+SHA512: b159c9f621f28e61f1f94f2eda97609675fede5f8120167bbdfcb6b927df55864a80a157a3714ac0f50dff8936d95aaf527421fe1e3901845dfa3d65c4c2d57d
+Homepage: https://github.com/opsengine/cpulimit
+Description: Limit cpu usage of a process in percentage
+
+Package: duff
+Architecture: i686
+Version: 0.5.2
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 36
+Filename: dists/extra/main/binary-i686/duff_0.5.2_i686.deb
+Size: 12360
+MD5sum: 7c1b6b4750212c4d937519c3bc6167de
+SHA1: 95eef2332710ca6a9b5f3b275809d7c79613fc74
+SHA256: 7e5e3670e88e5cfcdd26c502bc97b020110686f46aa3253627e72bb9614ad3ea
+SHA512: 2a64a62ca4165934daa224c912ca4b28cdf8f2b8d026c712db0e7b4f5b47c4a28228960f06d33fe36e10854952bdf8ad51bae7fa7fc7eca2bb1dad08c6718000
+Homepage: http://duff.sourceforge.net/
+Description: A command-line utility for quickly finding duplicates in a given set of files
+
+Package: e2fsprogs
+Architecture: i686
+Version: 1.44.3
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 2912
+Depends: libuuid, util-linux
+Filename: dists/extra/main/binary-i686/e2fsprogs_1.44.3_i686.deb
+Size: 510892
+MD5sum: e2f46b56c04cb83adf95927569a468b6
+SHA1: 1a771736e04a367d96b4201c664b075ecaa3a910
+SHA256: 46b151d690b9046cd54ba0c622ef74c24688e80de2f6e1cd99fb33a057441d49
+SHA512: ffa91f1b6c536d291d8e74886d6ade4974eb3c75c5a10daff321385d44562cfa5ab9cfa8a82d82918efbca8f8d1d5b1bd1a5a26ed42e663fb378f830a1ffef23
+Homepage: http://e2fsprogs.sourceforge.net
+Description: Ext2/3/4 filesystem utilities
+
+Package: hexedit
+Architecture: i686
+Version: 1.4.2
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 40
+Depends: ncurses
+Filename: dists/extra/main/binary-i686/hexedit_1.4.2_i686.deb
+Size: 15828
+MD5sum: cc4621e188777fbba327bf3506352e1a
+SHA1: 5666e17892a1f66e5c9a9953ffab8fdd43c00cb6
+SHA256: 12f24396094b93644f76176856d6f87d2116a689b436ce140728142b2d2a50c3
+SHA512: 897f1a69cab163b913450234fa9c039c92a1c202abdc34db9415583656df24f2324bcf764bb21a9c0798263e2b82e169365d7f384e813237db0462109e219c38
+Homepage: http://rigaux.org/hexedit.html
+Description: View and edit files in hexadecimal or in ASCII
+
+Package: hte
+Architecture: i686
+Version: 2.1.0-3
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 1484
+Provides: ht
+Depends: libc++, liblzo, ncurses
+Filename: dists/extra/main/binary-i686/hte_2.1.0-3_i686.deb
+Size: 445928
+MD5sum: cf87bf360bacb9e590cfa911a418ce25
+SHA1: 474191b6aeabda0722d73faff74916e2d3c4afbb
+SHA256: ec9a5995f6751ae3186050f6784f884b883a9982adf9b6ca2eb99cc4f573759b
+SHA512: e0fe0d8051e9f6f3653db5affafa0fd08086bc48f740548dcbfe90f80845f5b259e2136455d27367eb301ea8e5ad284c20e3872b453182871c29a08b41367c36
+Homepage: http://hte.sourceforge.net/
+Description: File editor/viewer/analyzer for executables
+
+Package: libgeoip-dev
+Architecture: i686
+Version: 1.6.11
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 32
+Depends: libgeoip
+Filename: dists/extra/main/binary-i686/libgeoip-dev_1.6.11_i686.deb
+Size: 5056
+MD5sum: a42830ce6a667a5144cf94df68970a00
+SHA1: a24c4c2e399da2ae1b4c408c0984f5e5e20aaad5
+SHA256: f0b23e02add7197a398a3ac216e3b072a177c94a083f6c9bc026e332f697028d
+SHA512: 1bdd432e5021e831ef61f45a927de5a0069be69b733f17a5f55e7a7ef6c2e2be336709ee4f7c9a38420f0f36f48d7f36e81043f16c324e4b28b8ffd51dbbf988
+Homepage: http://www.maxmind.com/app/c
+Description: Development files for libgeoip
+
+Package: libgeoip
+Architecture: i686
+Version: 1.6.11
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 216
+Depends: geoip-database
+Filename: dists/extra/main/binary-i686/libgeoip_1.6.11_i686.deb
+Size: 58632
+MD5sum: 31a202b2e8018e72645333b2d3b49eef
+SHA1: 5c4159f5ea1b9145f46e31736592f5398ac5f820
+SHA256: 6a759b892f0437f6734e4724957bdc813cf90168b30955a400d7f524cfe6669b
+SHA512: 6ffad3f28bcc7161ff62fad4f6fa2d63b2b5cc5b10c7c18ad70f9c4e401e9b90e90626cc33b0a34f1b3368d5542b8f73a73b564cbb20192c092f84bcfc5c764d
+Homepage: http://www.maxmind.com/app/c
+Description: Non-DNS IP-to-country resolver C library and utils
+
+Package: libjemalloc-dev
+Architecture: i686
+Version: 5.0.1-1
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 100
+Depends: libjemalloc
+Filename: dists/extra/main/binary-i686/libjemalloc-dev_5.0.1-1_i686.deb
+Size: 21764
+MD5sum: 4aac61b3385adbc77c9f38669c03e1ea
+SHA1: 0df0a783f23c7c9931e0543efa5932f20175a833
+SHA256: beefd7d7bed94dec94ca1d2298a326f7e1fe281b574fdbed1a1823bb00a2eb5f
+SHA512: e5c346e2ede5adbaccc2afdd22dfafd5dcb4f21a4a2717ee8d95e185722bbe88347829b80a77f9cfe40616c77eb3cbf22259521b7989632a9c96a46108033f79
+Homepage: http://www.canonware.com/jemalloc/
+Description: Development files for libjemalloc
+
+Package: libjemalloc
+Architecture: i686
+Version: 5.0.1-1
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 460
+Filename: dists/extra/main/binary-i686/libjemalloc_5.0.1-1_i686.deb
+Size: 139212
+MD5sum: 44af6476ec17222d66695a05749e1ca9
+SHA1: ff6a46ca7259b354d04fb52f60b61a51417afb09
+SHA256: 6e3de66cc517f4d2d4c4fed30aecfb7b5b0bc9834b9e32f6bf689334c2c85e4d
+SHA512: 6c48ebae48d1c41d859794d1a134b30745120249a60e7bb53ddb41874afadf90a802f21284f4de3c26b35772e44b8695a4955e95ae98e274e2cf4a994666c8c2
+Homepage: http://www.canonware.com/jemalloc/
+Description: General-purpose scalable concurrent malloc implementation
+
+Package: libseccomp-dev
+Architecture: i686
+Version: 2.3.2-2
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 168
+Depends: libseccomp
+Filename: dists/extra/main/binary-i686/libseccomp-dev_2.3.2-2_i686.deb
+Size: 14508
+MD5sum: d31d59950a0ca0e058b397b0b41d2e22
+SHA1: 20284f3fe12d222fc61240f1df5614d83113cebf
+SHA256: 047fcdd7018e9b313998ce96b1c8d5ce6d6b2c0cf7dc1c6f6103ccc15aae4d55
+SHA512: 3121a811dc229946e0588ba84e4840bb8af9602669ae47bd7c1eb15e472a85775f9cecf7937962bbb2f81272376d5c192f1587489ec56206f2be479ea64ae6a1
+Homepage: https://github.com/seccomp/libseccomp
+Description: Development files for libseccomp
+
+Package: libseccomp
+Architecture: i686
+Version: 2.3.2-2
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 140
+Filename: dists/extra/main/binary-i686/libseccomp_2.3.2-2_i686.deb
+Size: 28684
+MD5sum: 365d8b93cacf942febe170864c60c062
+SHA1: 06649da32b7aabda944e1dd132f4840df78032f1
+SHA256: 66567dc5b2c84b03bdb1e00487abe94761d07268ba3048036ca408f6c8488b82
+SHA512: a5b391df4bc2062bc560b41eed718b889f1396858a2232bb03206845c8c8f4c0d5c5321a87e7798516695bbc5b575741de53e70b913d59cdbcec78a185c99445
+Homepage: https://github.com/seccomp/libseccomp
+Description: Enhanced seccomp library
+
+Package: miniupnpc-dev
+Architecture: i686
+Version: 2.1
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 56
+Depends: miniupnpc
+Filename: dists/extra/main/binary-i686/miniupnpc-dev_2.1_i686.deb
+Size: 6596
+MD5sum: d53fe29d0ef634345366c940625cf145
+SHA1: b8b7abd122a3e9cb0ee705d82a2c5afe185b57d7
+SHA256: 09729fcb5786e32c9dc900af02d6b2e91f701f24021d48460f2f5bc721f7f270
+SHA512: 88fa61cc686c0962bfca0299af9882bbd5d80e55a76ba7569e61c23765a7453b9e2ff7c05fc8eb3b0439f0ec92ff44dd252a00f4695d91921f4989bc45e5dd6a
+Homepage: https://miniupnp.tuxfamily.org/
+Description: Development files for miniupnpc
+
+Package: miniupnpc
+Architecture: i686
+Version: 2.1
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 92
+Filename: dists/extra/main/binary-i686/miniupnpc_2.1_i686.deb
+Size: 24948
+MD5sum: 0b7eb15d3ecfda1dfbd74239b42ae6cd
+SHA1: 97c7fb16bfaff5a0fbeae020a6a2a43c834bb018
+SHA256: 5491d7841f1453db19b5da226f038654e6d6993e0f499f42338129c26a76763e
+SHA512: fd5d5416e9a3bbf8fadccca62d64d8451e2beb4567478e96110f81ed49df94109577f5d7ce4eca202bec878bae44bd412611558dd5167fbe7b60ed50ae37a921
+Homepage: https://miniupnp.tuxfamily.org/
+Description: Small UPnP client library/tool to access Internet Gateway Devices
+
+Package: obfs4proxy
+Architecture: i686
+Version: 0.0.8-dev-0
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 4720
+Depends: tor
+Filename: dists/extra/main/binary-i686/obfs4proxy_0.0.8-dev-0_i686.deb
+Size: 1487504
+MD5sum: 8cb76d9f0daf04484b449a81c2a79ae4
+SHA1: 7f9271a47b1df70a93e342f94b9bbbcd61f96374
+SHA256: 34bfeb635c76a58019d705b860f19dcd86b6b0fd409042b94a3856d882c15e93
+SHA512: 345344bab0fee3b00b7f16d396ecac300825e083e0d0691b6ec08fccc045d0ec78793ce7e1c4088ad103345b461f346a1d6d66f74a1f65f5ee7a146b4119c35c
+Homepage: https://sourceforge.net/projects/socks-relay
+Description: A Free SOCKS proxy server
+
+Package: qemu-system-aarch64-headless
+Architecture: i686
+Version: 2.12.0-3
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 10372
+Depends: qemu-system-headless
+Filename: dists/extra/main/binary-i686/qemu-system-aarch64-headless_2.12.0-3_i686.deb
+Size: 2503236
+MD5sum: 0dbbba46616b4544844dac0b979b16b4
+SHA1: 10a4d6ce6344c80ba41c0b76f193a6492a305404
+SHA256: 03927436320e9ea860a86ac9a5fc97d11f329912c67e5607d6260bdb22893837
+SHA512: 0d62ac97d83db96a627b6af352b2d797d8378b2128f99f4047fc6fd8a28da7b34b7e07010e59a41150a2551797cd1add65d0ad723fef9a7d21a1920f83f076f2
+Homepage: https://www.qemu.org
+Description: A generic and open source machine emulator and virtualizer (AArch64 target)
+
+Package: qemu-system-arm-headless
+Architecture: i686
+Version: 2.12.0-3
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 10164
+Depends: qemu-system-headless
+Filename: dists/extra/main/binary-i686/qemu-system-arm-headless_2.12.0-3_i686.deb
+Size: 2437460
+MD5sum: f4d8ccba61ca34758359d1952b90f33a
+SHA1: 6e1b313f1993b45b55441be97a6d40b849ba1c9d
+SHA256: 8f003ed5091f84f0965f681c771be66bfb0c77a9488eaede7b3eac7a620981ec
+SHA512: bc8d2c9bae15e66ae734d2f2db36693fb45a6daea89ee9c7714627f40f1aeeff6ddf9e0cfebc4c0dca58a53edf8a1eb7cb6d711088584df05aaad14733b4b2ec
+Homepage: https://www.qemu.org
+Description: A generic and open source machine emulator and virtualizer (ARM target)
+
+Package: qemu-system-headless
+Architecture: i686
+Version: 2.12.0-3
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 33516
+Provides: qemu-system
+Depends: glib, libandroid-shmem, libandroid-support, libbz2, libc++, libcurl, libgnutls, libjpeg-turbo, liblzo, libnettle, libpixman, libpng, libsasl, libseccomp, libssh2, libutil, ncurses
+Conflicts: qemu-system
+Replaces: qemu-system
+Filename: dists/extra/main/binary-i686/qemu-system-headless_2.12.0-3_i686.deb
+Size: 7976428
+MD5sum: 0e9621a7a9a5b873a5fc78abb6b76e29
+SHA1: 49975b8f42ce16eea1ca47ce0e25422c5d81daf1
+SHA256: 60e716fca71875e92716281873334befaa78552463270a7ba4721abbe76c5209
+SHA512: 345a13d5cd7df0e361d5317dd084a2bef31798f418b92ce93af806db6e29ca111dd569c098517660475dcd568c4cfc9f3c4e6f9611be1f6c3e7e2e35d7fc70ae
+Homepage: https://www.qemu.org
+Description: A generic and open source machine emulator and virtualizer (i386, x86_64 targets)
+
+Package: qemu-user-aarch64
+Architecture: i686
+Version: 2.12.0-3
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 3524
+Depends: libandroid-shmem, libandroid-support, glib, libc++
+Filename: dists/extra/main/binary-i686/qemu-user-aarch64_2.12.0-3_i686.deb
+Size: 782224
+MD5sum: 3c57abd8b0b35c2a4c01477eef33eafc
+SHA1: 914e8485d632870f73c6dd5125d50e1601f6f7aa
+SHA256: 2121992519794b82abdf46e7e695a296c6a5608356870f72b0c13cd437aee7bb
+SHA512: 4ab669f1fd95ddca1bcc2827864923ca07040fe1efe3abef4cb85dbaa20571ec5cbb9fdebfe4241f75c8d65a51c96324873c8a834f27d872b4f117ee9b3e37ad
+Homepage: https://www.qemu.org
+Description: AArch64 CPU usermode emulation
+
+Package: qemu-user-arm
+Architecture: i686
+Version: 2.12.0-3
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 3396
+Depends: libandroid-shmem, libandroid-support, glib, libc++
+Filename: dists/extra/main/binary-i686/qemu-user-arm_2.12.0-3_i686.deb
+Size: 738644
+MD5sum: c849769a37215f37c7f0d145779d9c38
+SHA1: 6889ed97e89ed6c2e2672dc34d327707ba181204
+SHA256: 9fff55db83faed2946d764fead0f653cbfa3814643459c25bcd1eb88a7048f5c
+SHA512: 5f62fb41ba07aca0ce32390c45bddf139c736e4b59825df0d110c5097b7a004d2682af9fcda9ab24f7a9de9ce5fff498aab79711955ea5d33f10dbec8eb94d38
+Homepage: https://www.qemu.org
+Description: ARM CPU usermode emulation
+
+Package: qemu-user-i386
+Architecture: i686
+Version: 2.12.0-3
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 3164
+Depends: libandroid-shmem, libandroid-support, glib, libc++
+Filename: dists/extra/main/binary-i686/qemu-user-i386_2.12.0-3_i686.deb
+Size: 655340
+MD5sum: 8151c16aecdb4a1213254cd58e904d4e
+SHA1: 87ac0c76ac358107b4a9b50ab11f852c9de4e6be
+SHA256: 4ddbb30cb28be4637b42bd25e954c71ec88364c6fa9847c4a397a2540d16c414
+SHA512: ed4230fe17f9b45ca2a4e9d93c566b45c10f9d0c6ec122dfc929f6f4542034585acbb745486c001cd38062b1b0f11c08a8b0ec784b6f30aa1c9686bd551f3399
+Homepage: https://www.qemu.org
+Description: i386 CPU usermode emulation
+
+Package: qemu-user-x86_64
+Architecture: i686
+Version: 2.12.0-3
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 3184
+Depends: libandroid-shmem, libandroid-support, glib, libc++
+Filename: dists/extra/main/binary-i686/qemu-user-x86_64_2.12.0-3_i686.deb
+Size: 665116
+MD5sum: 0e2a29a226fab8b603c696375abe3c1b
+SHA1: decf58f119c730fd35be1b7a0c07e6b232220983
+SHA256: 5fdd924ab46927ff121d37ab95ba6bb4a8d3dc158ed61a25834b74be20d61a73
+SHA512: 1e1b8efb02c5899c13bed7c72e3aab31e3ecf13c5b55a5f6118f685bd35586997e3eb1ed636a53a7590c92809d6054a445c768412e59cc043fa1f573dea5893e
+Homepage: https://www.qemu.org
+Description: x86_64 CPU usermode emulation
+
+Package: restic-server
+Architecture: i686
+Version: 0.9.7-1
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 6952
+Filename: dists/extra/main/binary-i686/restic-server_0.9.7-1_i686.deb
+Size: 2109824
+MD5sum: 01f7987e1ccf2548eeb42a02921d9e31
+SHA1: beeaf5336d54d224fb0da0f222e59b1056f6efd8
+SHA256: 773af825e9ada48092e83cdafcf276ee60e282cf9c4878aa643150ab11b0558c
+SHA512: 0ea5ca2b51ba8ec4747b3cf1d943e79c667b8a5ed174a786dcb7458b603cfecf9e61703695540b568bee3860e75c8c299f3c77eab394d0e5625824eb4b4e1c88
+Homepage: https://restic.net/
+Description: Restic's REST backend API server
+
+Package: restic
+Architecture: i686
+Version: 0.9.2
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 14072
+Recommends: dropbear | openssh, rclone, restic-server
+Filename: dists/extra/main/binary-i686/restic_0.9.2_i686.deb
+Size: 3966040
+MD5sum: 50014f66e21d6979be7a9c0f4840442d
+SHA1: a38232076e65aa529bc0b3f8716bed7e5c5e437d
+SHA256: 3db29541b40584163db7b91b44676802fd50123a1cce8abc1342584378263784
+SHA512: 1d5661fb314a38aa934b1d8b5640322f8c639134e62992d6465a3b11ea38fe9240a230c917df87291e31bc01dbabc6a4592ddb8a44b6542b3d92d18f91e4375b
+Homepage: https://restic.net/
+Description: restic is a program that does backups right.
+
+Package: runc
+Architecture: i686
+Version: 1.0.0-rc5-0
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 5660
+Depends: libseccomp
+Filename: dists/extra/main/binary-i686/runc_1.0.0-rc5-0_i686.deb
+Size: 1685552
+MD5sum: 003621fa9873bb997d217bb87dfe1adf
+SHA1: cbb7163fe9430f78cf14c32bce870ff6a7d979cf
+SHA256: b18802816cca7d408eb50661f02901f74a500d076ab41efe0dc07c03e5b00c5c
+SHA512: 693e70b6a3364833b0b803c00a3199abdbe4c9a891907c41ad4ca982d3c617c010253f7027c3f73a26f09ae8da829e11c2e40e473cf75eeb93a2d642f7d19a0b
+Homepage: https://www.opencontainers.org/
+Description: A tool for spawning and running containers according to the OCI specification
+
+Package: srelay
+Architecture: i686
+Version: 0.4.8p1
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 64
+Depends: libcrypt
+Filename: dists/extra/main/binary-i686/srelay_0.4.8p1_i686.deb
+Size: 23116
+MD5sum: 1d3c67da4583c327871acf404c981285
+SHA1: a75d29c1c617922603cb87ca026ea83d10a85449
+SHA256: 6892a215bcb3f3271d6724f53be0649395525db563bf07e28fe3aefe453f3e6b
+SHA512: 6bb30b23774aaa13a65f2d9b4bf753e8fb65a55194f154396b5c73e5b4e41b0ef70e70919ce168fae2d8f4fae32032081529d06fb1ac47ca4f8b30f9b2120aad
+Homepage: https://sourceforge.net/projects/socks-relay
+Description: A Free SOCKS proxy server
+
+Package: tcc
+Architecture: i686
+Version: 0.9.27-1
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 1812
+Filename: dists/extra/main/binary-i686/tcc_0.9.27-1_i686.deb
+Size: 412404
+MD5sum: 323bdb06b916855edcec4c455f6a9bc8
+SHA1: 510dabe4138f79427e7895ca0d979d63d2446df4
+SHA256: 2458674a5568090ac61c553c070a9a1cd8438af4497e03df58e9b2016db79fd6
+SHA512: 6a3f7443210f5fd6df94b4fee041591721f2e45482b5a2c072eab8f78e4ea2dcdd0341b196328f051ddf679401f3c47423fb621f7bfb05f8ec716e4c8fcf5f12
+Homepage: https://bellard.org/tcc/
+Description: Tiny C Compiler
+
+Package: cadaver
+Architecture: i686
+Version: 0.23.3-2
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 1456
+Depends: libxml2, ncurses, readline
+Filename: dists/extra/main/binary-i686/cadaver_0.23.3-2_i686.deb
+Size: 545572
+MD5sum: d453b22be5de9840ed6a4c601cfe4000
+SHA1: 36a46ba9947870256b9eb58768dda7b25b8977bd
+SHA256: 202795c102ce4b45d8c02f5f7aa963c1cb4bf8357f7a3cbabbbb9a388cc97c4e
+SHA512: 63d35e67b1550198d893052ecfd079c5a949d3dbb10662bee70ecf953d18ef1b8ae4075a4a1fa69b99147f26dfa66595b0a2be9f1a77d97c282f5a3819a36fea
+Homepage: http://www.webdav.org/cadaver/
+Description: cadaver is a command-line WebDAV client for Unix
+
+Package: sslscan
+Architecture: i686
+Version: 1.11.11
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 1360
+Filename: dists/extra/main/binary-i686/sslscan_1.11.11_i686.deb
+Size: 506968
+MD5sum: 0b27613271ba03aad43260f861268ecf
+SHA1: d32f4dbee16b7b90e2c329822a52c1ee49ceb662
+SHA256: bfce75c272cf5ad92d0a9722ab61774b60a19f4d4e49b4c3aaef4b1305b5381f
+SHA512: 04455b968a250e9dad26e5d8c5312d01f4f389316e6e8c4d02ee689116cc10d416c0cb594591586613f98053bbac3e7af3210131958911f0b3f07346761fbb5f
+Homepage: https://github.com/rbsec/sslscan
+Description: Fast SSL scanner
+

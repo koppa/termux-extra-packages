@@ -1,0 +1,74 @@
+Package: fasm
+Architecture: all
+Version: 1.73.04
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 108
+Depends: dash, qemu-user-i386
+Filename: dists/extra/main/binary-all/fasm_1.73.04_all.deb
+Size: 52680
+MD5sum: cd35f170df802704c662113bb9e55e2a
+SHA1: f1013687046b7fb7cd39ba67fd61a81916f0c32e
+SHA256: 8e0a09efc9fb03a232ce11bef22ef87bf6863c3a4c583d763b157d46a0c89f01
+SHA512: 6680ecb7c85485e16f3253ac2fff5cbab3d4e195a8dd0dcb58bf1587418460e2b341f7d72233e61eed2dfea967b13d3c020e68356d12a6c6a723125c574926b1
+Homepage: https://flatassembler.net/
+Description: The Flat Assembler. Runs on Android via QEMU.
+
+Package: geoip-database
+Architecture: all
+Version: 20180626
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 54760
+Filename: dists/extra/main/binary-all/geoip-database_20180626_all.deb
+Size: 25246768
+MD5sum: d83b2e817fece2630850d30334b18bdb
+SHA1: b9dd2249cd781cf009ea83f7914ae455b8bea7f1
+SHA256: 26c0901bba2c31f1a91f3a7d6442afbfb412d2e8ea255bf5f514bfd6fd4d99b1
+SHA512: 91c344a5b67ea675d3cc2c9234001b1617d1e88bb31407770210fa208b9c633a1f2eab10396b0fc1d9ac4cc23b9968ba14d4bab4b56a378be9ab636a098e7036
+Homepage: https://dev.maxmind.com/geoip/legacy/geolite/
+Description: MaxMind GeoIP database
+
+Package: pandoc-citeproc
+Architecture: all
+Version: 2.2.3.2
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 55532
+Depends: pandoc, qemu-user-x86_64
+Filename: dists/extra/main/binary-all/pandoc-citeproc_2.2.3.2_all.deb
+Size: 7346972
+MD5sum: c5c266e7a54e556c1c2604590880b79f
+SHA1: 37692798fc0dcdde23a19e53d43d904d8d2d46be
+SHA256: f0a1b0e1302c764e5fedaa7d02406132b94e77afabd18ad9f2d12cf16b5b4aac
+SHA512: 15bd7fc82a20e55bff4bb494e496d9fb63bef67bd484bf92cb9e3e8f13617cb21b6943cfe9d89058beb2e41db85ce029dd29c91d5109c52aea583a053997da0d
+Homepage: https://pandoc.org/
+Description: Pandoc support for Citation Style Language
+
+Package: pandoc
+Architecture: all
+Version: 2.2.3.2
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 67420
+Depends: dash, qemu-user-x86_64
+Filename: dists/extra/main/binary-all/pandoc_2.2.3.2_all.deb
+Size: 8872248
+MD5sum: b412435420316c534929413e788fc4f5
+SHA1: 73a21f3c1e9c63158b887d717839cf5936b12a49
+SHA256: 5bdd252ea08bb6b9981f05061d5ecd9a1ff28b96b18571994482e75cf9ca1fcb
+SHA512: 5ed46e3d41e0f10f80fca2d3c74c007c7a886ecfcded7272d759cff0dc1b28cecc84292d44c65588039990fc6de8e4726e2d63933eb856ba08895d93ddff0bff
+Homepage: https://pandoc.org/
+Description: Universal document converter
+
+Package: termux-makepkg
+Architecture: all
+Version: 2.2
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 76
+Depends: autoconf, automake, bzip2, coreutils, clang, curl, diffutils, file, findutils, gawk, grep, gzip, libtool, lzip, lzop, m4, make, patch, perl, pkg-config, sed, tar, termux-elf-cleaner, unzip, util-linux, xz-utils
+Filename: dists/extra/main/binary-all/termux-makepkg_2.2_all.deb
+Size: 14264
+MD5sum: b46c4d13114a9159f13d003fadd5243d
+SHA1: 36b3f7fd3efffe630e5d3a7d85b581538fbbd5b7
+SHA256: d2ac127354aacbe8dbe037cc59b8b2eb507999455c0d76486234d57102d00984
+SHA512: ea732597453e96d9598b6c65078e04e815a9f9a3d6ccb5e4b3dad3f5aac506900d194f29585ad5516c79f82cc337ff651b3b8853dfd987f7a5b3fb95d86ddf42
+Homepage: https://github.com/xeffyr/termux-makepkg
+Description: Package builder for Termux
+

@@ -1,0 +1,416 @@
+Package: cpulimit
+Architecture: aarch64
+Version: 0.2
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 24
+Filename: dists/extra/main/binary-aarch64/cpulimit_0.2_aarch64.deb
+Size: 7040
+MD5sum: 5e404f609cd9d849cbfca7aad38fc811
+SHA1: 31153e108d349b15e00782f22e244b91ca1f17a9
+SHA256: fcf0259f2bde107f0ed38c6f11616fa944539cb654819b4398595b5e725d7216
+SHA512: f23e9fcb3f9d3c1b5867d68172171e9696ab6579e2170b38e5106393a4626566a46cf9a56ee74f094d2ef79f91e49633bc49a477519e6a9244684795dd811c0d
+Homepage: https://github.com/opsengine/cpulimit
+Description: Limit cpu usage of a process in percentage
+
+Package: duff
+Architecture: aarch64
+Version: 0.5.2
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 40
+Filename: dists/extra/main/binary-aarch64/duff_0.5.2_aarch64.deb
+Size: 11916
+MD5sum: b74b571fa3ff8c26d684b7ce54df667b
+SHA1: 76c98483039b4e89ce412bb37152c954c79c1588
+SHA256: 6c363ce929940fc9afe76054df2d83555e16fd74e9c0182f4efce70f85be864a
+SHA512: 2e3c72c3a364d6cf5ffb1cef1f1c22de482c98abdab64a7bcc03fbc32e08f07c4bed527d4b0c1bdf50693e14de252a04d1a2d7e263d682e4868cb1a03fbbafd3
+Homepage: http://duff.sourceforge.net/
+Description: A command-line utility for quickly finding duplicates in a given set of files
+
+Package: e2fsprogs
+Architecture: aarch64
+Version: 1.44.3
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 2792
+Depends: libuuid, util-linux
+Filename: dists/extra/main/binary-aarch64/e2fsprogs_1.44.3_aarch64.deb
+Size: 446932
+MD5sum: 4f6fd7d25b31cde586fb8aa0456db7d8
+SHA1: 7fdb715a1189eabaf772bf8a4368c442a6ff4e7b
+SHA256: aa2929c7561d96bbd83c3dbeac6333b018d2fa7f0b983fd941ef01ea15a0faeb
+SHA512: 732170b301544a3a4f31e213acfd6388500b5da949b97e1255d11a8a53721680e77e655f72846e845ed70965cb3f1a191409e521cf5bae2eeb60e385601f9683
+Homepage: http://e2fsprogs.sourceforge.net
+Description: Ext2/3/4 filesystem utilities
+
+Package: hexedit
+Architecture: aarch64
+Version: 1.4.2
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 48
+Depends: ncurses
+Filename: dists/extra/main/binary-aarch64/hexedit_1.4.2_aarch64.deb
+Size: 15404
+MD5sum: 5d0e3c84913fd84489bf230bf9f26940
+SHA1: e9a1b51c2ae91ea488a32190bc1b397f3aa64979
+SHA256: 94493f8cc8962dced583073ae0b3e013937db76da052a000617e9bf7c171550c
+SHA512: 8613a3353bc0252c8fd94747e1f0ca3872ff4a5abec69dde156ce02a64719fd73f5fa595be2b9cfb5ac750e515f508ab18002cece560b8045cb4613181f5154c
+Homepage: http://rigaux.org/hexedit.html
+Description: View and edit files in hexadecimal or in ASCII
+
+Package: hte
+Architecture: aarch64
+Version: 2.1.0-3
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 1908
+Provides: ht
+Depends: libc++, liblzo, ncurses
+Filename: dists/extra/main/binary-aarch64/hte_2.1.0-3_aarch64.deb
+Size: 425160
+MD5sum: 25aeb46b07640e173984278f825f0fd3
+SHA1: 847b46716f608bf82ef2f2256358e49f117e5399
+SHA256: dff682eb7df5e93f053326a7a983d9d5f2d428064bf03aec7f0b5715f18c0582
+SHA512: d82b769eed1d4c3cd54ef826a4aa55b3b40aa6986aa0ae65b553de5179da9170fe3807851494967718c24dc6d86c6539919258c2768e455c2a40a9148e9dd332
+Homepage: http://hte.sourceforge.net/
+Description: File editor/viewer/analyzer for executables
+
+Package: libgeoip-dev
+Architecture: aarch64
+Version: 1.6.11
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 32
+Depends: libgeoip
+Filename: dists/extra/main/binary-aarch64/libgeoip-dev_1.6.11_aarch64.deb
+Size: 5060
+MD5sum: cb7b754830d235d5bc41f06ad096d08b
+SHA1: e2c1155a358b20ee60727dfea6c1e6dc57bba753
+SHA256: c1ea2ee89ad3a4780641d4e2f5c947b3160f27d7315437e2aa2a78c098a4a1c2
+SHA512: 329ea36bbeab9fb0e84ba37faed177d735a911baff7394e6b69ffa3ad8857a22b1f362b1482a7c41c7365231d27a12a5a056370c4a6ec5ef5ec7187a08dcb0e9
+Homepage: http://www.maxmind.com/app/c
+Description: Development files for libgeoip
+
+Package: libgeoip
+Architecture: aarch64
+Version: 1.6.11
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 300
+Depends: geoip-database
+Filename: dists/extra/main/binary-aarch64/libgeoip_1.6.11_aarch64.deb
+Size: 60300
+MD5sum: 5d18783e55a47a050137dcb5f7543124
+SHA1: ed22f59faeb99f5470777ed866e8ec8d36cda459
+SHA256: b57fc0fd215bab8029520c1fa98a54cea258d6dcbbe8a21b53b81e8304c4c3f6
+SHA512: 4c1b1977b4424acc6a42691a67e7e3e25187df9c3153b714fb17b6eb9a05f1b123d010e6544801c992690686a43b30ae037606753712bd353b3b021abe740501
+Homepage: http://www.maxmind.com/app/c
+Description: Non-DNS IP-to-country resolver C library and utils
+
+Package: libjemalloc-dev
+Architecture: aarch64
+Version: 5.0.1-1
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 100
+Depends: libjemalloc
+Filename: dists/extra/main/binary-aarch64/libjemalloc-dev_5.0.1-1_aarch64.deb
+Size: 21760
+MD5sum: d4ca8772dbd2e4fa985457017253888e
+SHA1: 2a0d3f66b658a82da8b3a9366d1b88bd030c7d27
+SHA256: d59db53e910f2664162297175db6423288de135c539d7812ff1b6be12431d727
+SHA512: 2089a9df7ef36501a1ba10294cf86427b0c4a213a0a5b27481de33fd226c16a8fd9efa712e4af9068a6b850d215c73110aed3911730499ef5181fe5e6b737da2
+Homepage: http://www.canonware.com/jemalloc/
+Description: Development files for libjemalloc
+
+Package: libjemalloc
+Architecture: aarch64
+Version: 5.0.1-1
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 468
+Filename: dists/extra/main/binary-aarch64/libjemalloc_5.0.1-1_aarch64.deb
+Size: 124688
+MD5sum: f5d05c46f4d6645247055f5dbf33b752
+SHA1: 99139d78ea22087a7d4b4f1ab0eb3dc4ab92a565
+SHA256: 9f7f260ee163bd0026c6ca171770570b06dd65e6336985dd60bc2aaca7fa0923
+SHA512: 65e4c6c5a3a369f065a765253c6aeb6dedcb9b53b4258854e246b278fc6a7739dab485950da3573f7d197677f4546d6058dc6f6c382444c21f882edac27d2f03
+Homepage: http://www.canonware.com/jemalloc/
+Description: General-purpose scalable concurrent malloc implementation
+
+Package: libseccomp-dev
+Architecture: aarch64
+Version: 2.3.2-2
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 168
+Depends: libseccomp
+Filename: dists/extra/main/binary-aarch64/libseccomp-dev_2.3.2-2_aarch64.deb
+Size: 14520
+MD5sum: 125e1b3d6bfb2437e8453186ed710a63
+SHA1: 393a355070d3e677c7c95d6abf206e6beccc9b6f
+SHA256: f63c8199e3b33c235894607d9d8c3a8bb0358355f1f689b9ebc4ff6d0d12b9f7
+SHA512: d46392ad2c8b463c039d4c47fd3a38ef1a5627ef161eef1d4cab3580644999627d99d4d908c0f9734bb288e75950ae12930ec5f1d4abe954c69cfbd88af7f4c0
+Homepage: https://github.com/seccomp/libseccomp
+Description: Development files for libseccomp
+
+Package: libseccomp
+Architecture: aarch64
+Version: 2.3.2-2
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 268
+Filename: dists/extra/main/binary-aarch64/libseccomp_2.3.2-2_aarch64.deb
+Size: 31416
+MD5sum: 2a504706a171d5a8a8a1e4ba7cb78fdf
+SHA1: 4873b928d0288b0359f3dbb734e5c9d674ce1758
+SHA256: f707cc13fbbf54b32e97a3954de29adfda8ead887f8e838e6a34543f78017ded
+SHA512: 1a00929c34e1700187c61a41ea5e833bf67adcbf4b1d18f8ae4b74106bdd1e49621e94753a39ab7eef5ff4b3daba4f3f68bd00e64c91ab82fb308d80ab5c23e2
+Homepage: https://github.com/seccomp/libseccomp
+Description: Enhanced seccomp library
+
+Package: miniupnpc-dev
+Architecture: aarch64
+Version: 2.1
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 56
+Depends: miniupnpc
+Filename: dists/extra/main/binary-aarch64/miniupnpc-dev_2.1_aarch64.deb
+Size: 6596
+MD5sum: 5f4917ce3b1fea0ffb3ea498ca893056
+SHA1: 4456a5bc674f92f84b364f61cd007299cf7730f8
+SHA256: 4dfa06283a26a5b8e914f4085c4794769890c24392d5b258736968663ee4736d
+SHA512: 07367203e987b769b3a45f1daa593117eda9a2eed36fb9153d09b07b587b05c646df76adfb0520ddc28a2e44a77311a09bb04d4430eb35ed1921c5dcff40f160
+Homepage: https://miniupnp.tuxfamily.org/
+Description: Development files for miniupnpc
+
+Package: miniupnpc
+Architecture: aarch64
+Version: 2.1
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 96
+Filename: dists/extra/main/binary-aarch64/miniupnpc_2.1_aarch64.deb
+Size: 23768
+MD5sum: 81cd36ebf126a6706521c28d3f0e9705
+SHA1: bac2ee6898d67388e7a5e1d4c04a68e391205692
+SHA256: 6446f3b77ee91ab87ea571c1295e7c964afbc15321dc395879a3ad33bb9a645b
+SHA512: 1a2e9c6112e02e271b8bf4bc11ea1cb57e1c22d8fc7a99b81fcf0d91a04f521d1f88e934dc0cdf88fdb4ced36c7819c326c955813127bc8fdb119b70fab0c027
+Homepage: https://miniupnp.tuxfamily.org/
+Description: Small UPnP client library/tool to access Internet Gateway Devices
+
+Package: obfs4proxy
+Architecture: aarch64
+Version: 0.0.8-dev-0
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 5716
+Depends: tor
+Filename: dists/extra/main/binary-aarch64/obfs4proxy_0.0.8-dev-0_aarch64.deb
+Size: 1350756
+MD5sum: a1f156356c45c5fb10a5b2c4ae38bfe6
+SHA1: fac8b9d525d64e8a721ddde05591c96be2f8e866
+SHA256: 533060274089ae6868d5fc25d6fa736127e9a4f21224757c1a7cbd92d9925c02
+SHA512: 9cadac563c438a0c93243b4342f6657b19e323b52cda370993fb87fa0db5245375e43fb941fa4023556e16e22a07eb592c937c357ecd18e1e95d1cb3beca88b8
+Homepage: https://sourceforge.net/projects/socks-relay
+Description: A Free SOCKS proxy server
+
+Package: qemu-system-aarch64-headless
+Architecture: aarch64
+Version: 2.12.0-3
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 12716
+Depends: qemu-system-headless
+Filename: dists/extra/main/binary-aarch64/qemu-system-aarch64-headless_2.12.0-3_aarch64.deb
+Size: 2234956
+MD5sum: 2189ea1c978972d714be151d47965dcf
+SHA1: 6810e5205e3aab8390e066b9d4197de5b9ce2240
+SHA256: ffe9ff0e9cecfffe579beb5890a4d0a84d848f00dc2bbfaf0d2cc4fed33db824
+SHA512: 851c397cb509e16acf96a9e98b97dfb01ce86137dc4355f09d595a47e2fc2a6567d62d4b6c92bec245571dcf3051dfa963429246c1ace161677dc9bbad8ab5c6
+Homepage: https://www.qemu.org
+Description: A generic and open source machine emulator and virtualizer (AArch64 target)
+
+Package: qemu-system-arm-headless
+Architecture: aarch64
+Version: 2.12.0-3
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 12516
+Depends: qemu-system-headless
+Filename: dists/extra/main/binary-aarch64/qemu-system-arm-headless_2.12.0-3_aarch64.deb
+Size: 2180376
+MD5sum: 80de7d94709d6d5959092121db738b42
+SHA1: 744af9dfca24a7e4bf2bf2563cc26877ba1552e7
+SHA256: d143f20418125576784998f9d681b5786cf4689bd4da7e0488e8b2c91bf7c06f
+SHA512: a93bef6c3e99bfd6417d67672fe93f8a0ee80d6fcffe51fb11405027fe632d1a65d20209db755298c6760f10e7180970f8599b6efd709d4f00ad426a87f9e49f
+Homepage: https://www.qemu.org
+Description: A generic and open source machine emulator and virtualizer (ARM target)
+
+Package: qemu-system-headless
+Architecture: aarch64
+Version: 2.12.0-3
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 38728
+Provides: qemu-system
+Depends: glib, libandroid-shmem, libandroid-support, libbz2, libc++, libcurl, libgnutls, libjpeg-turbo, liblzo, libnettle, libpixman, libpng, libsasl, libseccomp, libssh2, libutil, ncurses
+Conflicts: qemu-system
+Replaces: qemu-system
+Filename: dists/extra/main/binary-aarch64/qemu-system-headless_2.12.0-3_aarch64.deb
+Size: 7629852
+MD5sum: 3121a0a29d38742f24282c32e122fbed
+SHA1: df1945583cce3e3625780ce4dc37953f66bed43c
+SHA256: 77c539482bf6054b9b9230982616f81637df6ba6aa33f4fae1184c52e30a6ace
+SHA512: 0f4b7c52bc461929d9c4c8613f551b26d754ed8aeecef3b44686f20c19a51330c93148d9fbe3fe93e5fd06d85d86dd13dcdaa774c36ac6acc2f8ce8a5cf80215
+Homepage: https://www.qemu.org
+Description: A generic and open source machine emulator and virtualizer (i386, x86_64 targets)
+
+Package: qemu-user-aarch64
+Architecture: aarch64
+Version: 2.12.0-3
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 3624
+Depends: libandroid-shmem, libandroid-support, glib, libc++
+Filename: dists/extra/main/binary-aarch64/qemu-user-aarch64_2.12.0-3_aarch64.deb
+Size: 679076
+MD5sum: 9beb49d192409c95c19439e523604e54
+SHA1: 774e7cf217712d08f8044f5f514c4b458bc3cedb
+SHA256: b6eff313dd3a531c74d6de29c6d22f05176633ab0f18a828a5c5fcd4e4eddb3c
+SHA512: 0fc763e93a0c4f7a1749e135ef2c0e0ef6ef461f32978f4942803241bc1bba8ca320251bdd698962c8febd77fb37cdf6b2b0e6fd0ca25d729287f7c848b2fa01
+Homepage: https://www.qemu.org
+Description: AArch64 CPU usermode emulation
+
+Package: qemu-user-arm
+Architecture: aarch64
+Version: 2.12.0-3
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 3524
+Depends: libandroid-shmem, libandroid-support, glib, libc++
+Filename: dists/extra/main/binary-aarch64/qemu-user-arm_2.12.0-3_aarch64.deb
+Size: 650036
+MD5sum: a79fb7d6261ecd5392ea7db258a934b7
+SHA1: 17ec03619cef1efeb1a072a181aec73c5ae113a6
+SHA256: af2267ed2b2ade8e3372e8baf692bc1b94870f3a845b0d34a6fd104884abba7c
+SHA512: 5a90cbff38019d366eae2cb28f3993a1da32072c5dd1f8795cb83f146553895ba92e273c5fb54b12900fb689a86d9764c41787b7e955265c00672675f08e6451
+Homepage: https://www.qemu.org
+Description: ARM CPU usermode emulation
+
+Package: qemu-user-i386
+Architecture: aarch64
+Version: 2.12.0-3
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 3612
+Depends: libandroid-shmem, libandroid-support, glib, libc++
+Filename: dists/extra/main/binary-aarch64/qemu-user-i386_2.12.0-3_aarch64.deb
+Size: 627828
+MD5sum: f4936277e59717b3e28506aae316c9cd
+SHA1: 0efa6e898eab532e7bd4497481546fcbae547f39
+SHA256: f351d0fb47cf61cef2506d2e082c45c465979a9d2e0fb2f0a64287ea64dae996
+SHA512: fa8de0c5bcff3b699d7fd7108925ebe972ef6eca21dd52f69096add7fe4966fd661fca8266affb2c63bcceea7ea4aaa53921e482069665b74bec4818762f58bc
+Homepage: https://www.qemu.org
+Description: i386 CPU usermode emulation
+
+Package: qemu-user-x86_64
+Architecture: aarch64
+Version: 2.12.0-3
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 3608
+Depends: libandroid-shmem, libandroid-support, glib, libc++
+Filename: dists/extra/main/binary-aarch64/qemu-user-x86_64_2.12.0-3_aarch64.deb
+Size: 625832
+MD5sum: b8afad36146c12645e35f59b3794f5b9
+SHA1: ae2878c0f83ea0c6109b129c52af4822be952453
+SHA256: d2665ae7efe4af73f9b1cd9f191f8edcf56442144aed564ebd9ed2cbad3e437e
+SHA512: 29b2f89f083ec982c731a3ae93fa921328d5944e002bc2c5bda8015661dc763ceef6e545e37c9b8e68b203412d172a594a5439cad635b82351981cf5d474ff71
+Homepage: https://www.qemu.org
+Description: x86_64 CPU usermode emulation
+
+Package: restic-server
+Architecture: aarch64
+Version: 0.9.7-1
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 8548
+Filename: dists/extra/main/binary-aarch64/restic-server_0.9.7-1_aarch64.deb
+Size: 1925260
+MD5sum: 79dedafd977e45d51b6694e146e06470
+SHA1: f728e746a924bc0d9f128d87c8b3c721b5656333
+SHA256: 6b9415b11bd8385c102b564521889358af1cc891357aec89bb91d5cd4e4b7374
+SHA512: a9a4d91787987eb8df8b7acfb0f0fedefb60cc1c63997fd4ba6a2fc84515d11fd5a0190f0b8495f0659bb25c219cd69c7a8f7e5d5b1f7c974e7ea2dd5550c399
+Homepage: https://restic.net/
+Description: Restic's REST backend API server
+
+Package: restic
+Architecture: aarch64
+Version: 0.9.2
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 17032
+Recommends: dropbear | openssh, rclone, restic-server
+Filename: dists/extra/main/binary-aarch64/restic_0.9.2_aarch64.deb
+Size: 3618636
+MD5sum: 8dbf431f7e75265b28d72a1fbfbfd19e
+SHA1: 5f12b6202f20f17fab47a9732247a5a883da1aec
+SHA256: 82bcabafe9327c1cb9a10c8a9d3b6813ff33d128bb2c130d0338bf6ec695c20b
+SHA512: 1ea4168de3624c223a9660e7bad2fff2e514fdb09dda46ef8ba611d2c3c5ebf9c448760e45ffbade9ea53db20c8110437a4dd597a1ad2d37e124d08f01e8f2b0
+Homepage: https://restic.net/
+Description: restic is a program that does backups right.
+
+Package: runc
+Architecture: aarch64
+Version: 1.0.0-rc5-0
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 7028
+Depends: libseccomp
+Filename: dists/extra/main/binary-aarch64/runc_1.0.0-rc5-0_aarch64.deb
+Size: 1544372
+MD5sum: aea7863a10b4a9d4e0e818430def4ac4
+SHA1: 7f1c1182b957616d6e41145a82e639d29347af68
+SHA256: b749081c8fbd29114773b7e10168c5956fbe975b4c89298cac17e3c5dc3aefa5
+SHA512: a59d140fa96b51cbf603eb721d0df97b4f6d3146898e7248e7427fc8aa78c0ee8169da095e8a3df621fc0bc5ed106f6bf0e55e0dd94d5a539e4bca71d1c60d4b
+Homepage: https://www.opencontainers.org/
+Description: A tool for spawning and running containers according to the OCI specification
+
+Package: srelay
+Architecture: aarch64
+Version: 0.4.8p1
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 68
+Depends: libcrypt
+Filename: dists/extra/main/binary-aarch64/srelay_0.4.8p1_aarch64.deb
+Size: 21352
+MD5sum: f6f9946317a8102eb3f3965710ad9dff
+SHA1: 198c25949efd23e6fafdf5ebc48196924401d2f8
+SHA256: a7a86ed262d6a345d1baf0bba93c72b3954c913271128641b984ccbd311fbee9
+SHA512: da6292844ca0c4329af76d7dcecb417b8e80192a46cb0fd46a7e2dd017656cdebbf4444e18db9283d68ed8a8411d3ba7cf7df9ea57ee511141738f7becf7ece8
+Homepage: https://sourceforge.net/projects/socks-relay
+Description: A Free SOCKS proxy server
+
+Package: tcc
+Architecture: aarch64
+Version: 0.9.27-1
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 2148
+Filename: dists/extra/main/binary-aarch64/tcc_0.9.27-1_aarch64.deb
+Size: 374816
+MD5sum: b5dd1caed6f5178ff350d2364f37b940
+SHA1: 69ed12228951ef9d83e3cccc6c7a53dc020887f0
+SHA256: 7e91268481205a44ba29a341e6674ee28e830c0e45dbeec13c19fab4cb775d8e
+SHA512: 51cb712cf2c488439de7312e8cc566b325bdf143755a42ad8cd7fdaba6ad9c3a958710afe57a51d60558ce785ae6f5373436a25f6e21b7675a2113c3aba8d1bd
+Homepage: https://bellard.org/tcc/
+Description: Tiny C Compiler
+
+Package: cadaver
+Architecture: aarch64
+Version: 0.23.3-2
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 1564
+Depends: libxml2, ncurses, readline
+Filename: dists/extra/main/binary-aarch64/cadaver_0.23.3-2_aarch64.deb
+Size: 498256
+MD5sum: 7feb3c1699c6be6638990e56f5da75bc
+SHA1: 2b8230d78fd4c2c3a920919e92067b059bbda23a
+SHA256: b5ed75a88f4f47e6cfdcf8633d96f306766640f9761849060d1dd0d89ba2d6f6
+SHA512: 9340eeae911e6686cf50061d4718545879a0649da0c395cb6d3f5afe0dae7029a2039d71bbd78f285e6d10d3c211996fe897012997b5ebf4bd9e68dd38fa6082
+Homepage: http://www.webdav.org/cadaver/
+Description: cadaver is a command-line WebDAV client for Unix
+
+Package: sslscan
+Architecture: aarch64
+Version: 1.11.11
+Maintainer: Leonid Plyushch <leonid.plyushch@gmail.com> @xeffyr
+Installed-Size: 1456
+Filename: dists/extra/main/binary-aarch64/sslscan_1.11.11_aarch64.deb
+Size: 460704
+MD5sum: 40b6ebec284f215bbddaf8d766e01931
+SHA1: 0f76e6129a41ed4098638edbed79c6d11aeb95e9
+SHA256: a4270a3a61d885a843e5241ceb68fec917fac28bddd8c7ec3690a3371028cce2
+SHA512: 525103d8708a91a08e7f2620039ae28c688c62ccabd4e85292ae82e236a56dc665b1c6e910e79902a4dd3260a14c103793f83a8cfe2dd808d8371334c2706201
+Homepage: https://github.com/rbsec/sslscan
+Description: Fast SSL scanner
+
